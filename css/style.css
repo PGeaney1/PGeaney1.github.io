@@ -1,0 +1,833 @@
+/* Global */		
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+	
+}
+
+body {
+	background-color: #214d58;
+}
+
+a:link {
+	color: #f68f67;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #f68f67;
+	text-decoration: none;
+}
+
+.navigation .active{
+	cursor:pointer;
+	color: #f68f67;
+	font-weight:bold;
+}
+
+.s1 {
+	background-image: url(../images/bg1.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color:#fff;	
+	
+}
+
+
+.s2 {
+	background-image: url(../images/bg2.png);
+	background-position: center center;
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	color:#fff;
+}
+
+.s2 a {
+	
+	color: #fff;
+}
+
+.s3 {
+	background-image: url(../images/bg3.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color:#fff;
+}
+
+
+.s4 {
+	background-image: url(../images/bgUnderwater.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color:#fff;
+}
+
+.section {
+	position: relative;
+	height: 800px;
+	display: block;
+	float: left;
+	width:100%;
+}
+
+#spaceBg{
+	width: 100%;
+	position: absolute;
+	background-image: url(../images/bgSpace.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:800px;
+}
+
+#sky2Bg{
+	width: 100%;
+	position: absolute;
+	background-image: url(../images/bgSky.png);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:1600px;
+}
+
+#underwaterBg{
+	width: 100%;
+	position: absolute;
+	background-image: url(../images/bgUnderwater.png);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:1600px;
+}
+
+nav#primary {
+	position: fixed;
+	top: 50%;
+	right: 16px;
+	margin-top: -40px;
+	z-index:5;
+}
+
+nav#primary li {
+	position: relative;
+	height: 20px;
+	list-style-type: none;
+}
+
+nav#primary a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background: transparent url('../images/nav-dot.png') 4px 4px no-repeat;
+}
+
+nav#primary a:hover, nav#primary a.active {
+	background: transparent url('../images/nav-dot.png') 4px -16px no-repeat;
+}
+
+nav#primary h1 {
+	position: absolute;
+	right: 22px;
+	top: -7px;
+	display: none;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+	background: transparent url('../images/nav-arrow.png') 100% 50% no-repeat;
+}
+	
+nav.next-prev {
+	margin: 20px 0 0 0;
+}
+a.prev,
+a.next {
+	display: block;
+	width: 15px;
+	height: 11px;
+	text-indent: -9999px;
+}
+
+a.prev {
+	margin: 0 auto 5px auto;
+	background: transparent url('../images/scroll-arrow-up.png') 0 0 no-repeat;
+}
+
+a.prev:hover {
+	background: transparent url('../images/scroll-arrow-up.png') 0 -11px no-repeat;
+}
+
+a.next {
+	margin: 5px auto 0 auto;
+	background: transparent url('../images/scroll-arrow-down.png') -1px 0 no-repeat;
+}
+
+a.next:hover {
+	background: transparent url('../images/scroll-arrow-down.png') -1px -11px no-repeat;
+}
+			
+			
+#nav-trigger {
+  display: none;
+  text-align: center; 
+}
+
+#nav-trigger span {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #21a97e;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase; 
+}
+
+#nav-trigger span:after {
+     display: inline-block;
+     margin-left: 10px;
+     width: 20px;
+     height: 10px;
+     content: "";
+     border-left: solid 10px transparent;
+	 border-top: solid 10px #fff;
+     border-right: solid 10px transparent; 
+}
+
+#nav-trigger span:hover {
+     background-color: #315f5f; 
+}
+
+#nav-trigger span.open:after {
+     border-left: solid 10px transparent;
+     border-top: none;
+     border-bottom: solid 10px #fff;
+     border-right: solid 10px transparent; 
+}
+
+nav {
+  margin-bottom: 0px;
+  z-index: 6;  
+}
+
+nav#nav-main {
+  background-color: #21a97e;
+  padding: 10px 0; 
+  position: fixed; 
+  width:100%; 
+  opacity: 0.9;
+  filter: alpha(opacity=90); 
+}
+
+nav#nav-main ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;  
+}
+
+nav#nav-main li {
+    display: inline-block;
+    border-right: solid 1px #315f5f;
+    padding: 0 5px;  
+}
+
+nav#nav-main li:last-child {
+      border-right: none;  
+}
+
+nav#nav-main a {
+    display: block;
+    color: white;
+    padding: 10px 30px; text-decoration: none;
+}
+
+nav#nav-main a:hover {
+      background-color: #315f5f;
+      color: #fff; 
+}
+	  
+nav#nav-main a:active,
+nav#nav-main .active a {
+ 
+}
+
+nav#nav-mobile {
+  position: relative;
+  display: none; 
+}
+
+nav#nav-mobile ul {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #21a97e; 
+}
+
+nav#nav-mobile li {
+    display: block;
+    padding: 5px 0;
+    margin: 0 5px;
+    border-bottom: solid 1px #315f5f; 
+}
+
+nav#nav-mobile li:last-child {
+      border-bottom: none; 
+}
+  nav#nav-mobile a {
+    display: block;
+    color: white;
+    padding: 10px 30px; text-decoration: none;
+}
+
+nav#nav-mobile a:hover {
+    background-color: #315f5f;
+    color: #fff; 
+}
+
+@media all and (max-width: 900px) {
+#nav-trigger {
+    display: block; 
+}
+
+nav#nav-main {
+    display: none; 
+}
+
+nav#nav-mobile {
+    display: block; 
+} 
+}
+	
+.aside{
+	width: 100px;
+	margin-left: auto;
+    margin-right: auto;
+    z-index:3;
+	
+  
+}
+
+.stickit{
+	position: fixed;
+	top: 0;
+	left:0;
+	right:0;
+}
+
+.stickit-end{
+	bottom:0;
+	left:0;
+	right:0;
+	position: absolute;
+}
+
+#sticky1{
+	height: 750px;
+	width:100%;
+}
+
+#sticky2{
+	height: 1500px;
+	width:100%;
+	}
+
+#sticky3{
+	height: 1500px;
+	width:100%;
+	z-index:2;
+}
+
+
+
+#bannerleft{
+	position:relative;
+	width:400px;
+	z-index:1;
+	float:left;
+}
+
+#homebanner{
+   width: 400px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   position:relative;
+   z-index:2;
+}
+
+#mainBg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index:4;
+	width:100%;
+}
+
+#waterBg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index:4;
+	width:100%;
+}
+
+#parallax-bg1{
+	position: absolute;
+	top: 150px;
+	left: 100px;
+	z-index: 1;
+	width:100%;
+}
+
+#parallax-bg2{
+	position: absolute;
+	top: 350px;
+	left: -10px;
+	z-index: 2;
+	width:100%;
+	height:100%;
+}
+
+#parallax-cloudbg1{
+	position: absolute;
+	top: 550px;
+	left: 10px;
+	z-index: 4;
+	opacity:0.5;
+	width:100%;
+	height:100%;
+}
+
+#parallax-cloudbg2{
+	position: absolute;
+	top: 52px;
+	left: 50px;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+
+#parallax-cloudbg3{
+	position: absolute;
+	top: 700px;
+	left: 350px;
+	z-index: 2;
+	width:100%;
+	height:100%;
+}
+
+#parallax-fg1{
+	position: absolute;
+	top: 200px;
+	left: 0;
+	z-index: 4;
+	width:80%;
+	height:80%;
+	opacity:0.5;
+}
+
+#parallax-fg2{
+	position: absolute;
+	top: 250px;
+	left: -150px;
+	z-index: 4;
+	width:100%;
+	height:100%;
+}
+
+#parallax-fg3{
+	position: absolute;
+	top: 350px;
+	left: 50px;
+	z-index: 3;
+	width:100%;
+	height:100%;
+}
+
+#parallax-fg4{
+	position: absolute;
+	top: 550px;
+	left: -50px;
+	z-index: 0;
+	width:100%;
+	height:100%;
+}
+
+#parallax-fg5{
+	position: absolute;
+	top: 1000px;
+	left: 10px;
+	z-index: 3;
+	width:100%;
+	height:100%;
+}
+
+#ufo1 {
+  position: fixed;
+  width: 100%;
+  top:10;
+}
+
+#ufo2 {
+  position: fixed;
+  width: 100%;
+  top:10;
+}
+
+#plane {
+  position: fixed;
+  width: 60%;
+  top:10;
+}
+
+
+#helicopter {
+ position:absolute;
+  width: 100%;
+  top:0;
+}
+
+#bus{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index:5;
+	width:100%;
+}
+
+#van{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:4;
+	width:100%;
+}
+
+#boat{
+    position: absolute;
+    right: 20;
+    bottom: 0;
+    z-index:5;
+	width:100%;
+}
+
+#shark1{
+    position: absolute;
+  	right: 0;
+    top: 0;
+    z-index:3;
+	width:100%;
+}
+
+#shark2{
+    position: absolute;
+  	right: 0;
+    top: 0;
+    z-index:5;
+	width:100%;
+}
+
+.mobile body {
+	overflow: hidden;
+
+}
+
+.mobile #wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color:#0F9;
+	-webkit-overflow-scrolling: touch;
+	
+	
+}
+
+.mobile #scroller {
+	height: 3500px;
+	
+}
+
+@media all and (max-width: 960px) {
+.article,menu, nav, section { 
+    	display: block;
+}
+
+.s1 {
+	background-image:none;
+	background-colour:#063;
+	position: relative;
+
+
+	
+	
+}
+
+#spaceBg{
+	background-image: url(../images/mobileSpace.png);
+	
+	
+}
+
+.s2 {
+	background-image:none;
+	position:relative;
+	color:#fff;	
+	height:800px;
+	position: relative;
+}
+
+#sky2Bg{
+	background-image: url(../images/mobilebg.png);
+	
+}
+
+.s3 {
+	background-image:none;
+	position:relative;
+	color:#fff;	
+	height:800px;
+}
+
+.s4 {
+	background-image:none;
+	position:relative;
+	color:#fff;	
+	height:800px;
+}
+
+#underwaterBg{
+	background-image: url(../images/mobileunderwaterbg.png);
+}
+
+#waterBg {
+	display:none;
+}
+
+#mainBg {
+	
+	display:none;
+}
+
+#primary{
+	display:none;
+}
+
+.aside {
+    width: 50px;  
+    display: block;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%); /* Safari and Chrome */
+	-moz-transform: translate(-50%, -50%); /* Firefox */
+	-ms-transform: translate(-50%, -50%); /* IE 9 */
+ 	-o-transform: translate(-50%, -50%); /* Opera */
+	overflow:hidden;
+	-webkit-transform: translateZ(0);
+	z-index:6;
+	position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 15px;
+	overflow-y: hidden;
+	overflow: hidden;
+}
+
+#parallax-bg1{
+	position: absolute;
+	top: 200px;
+	left: -50px;
+	z-index: 1;
+	width:100%;
+}
+
+#parallax-bg2{
+	position: absolute;
+	top: 450px;
+	left: -10px;
+	z-index: 2;
+	width:100%;
+	height:100%;
+}
+#bannerleft{
+	display:none;
+}
+
+#parallax-fg1{
+	position: absolute;
+	top: 50;
+	left: 10px;
+	z-index: 3;
+	width:100%;
+	height:100%;
+}
+
+#parallax-fg2{
+	position: absolute;
+	top: 350;
+	left: 20px;
+	z-index: 7;
+	width:100%;
+	height:100%;
+}
+
+#parallax-fg3{
+	position: absolute;
+	top: 750;
+	left: 20px;
+	z-index: 7;
+	width:100%;
+	height:100%;
+}
+
+#parallax-cloudbg1{
+	position: absolute;
+	top: 550px;
+	left: 0px;
+	z-index: 1;
+	width:100%;
+	height:100%;
+}
+
+#parallax-cloudbg2{
+	position: absolute;
+	top: 52px;
+	left: 0px;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+#parallax-cloudbg3{
+	position: absolute;
+	top: 700px;
+	left: 350px;
+	z-index: 2;
+	width:100%;
+	height:100%;
+}
+
+#ufo1 {
+  position: absolute;
+  width: 50%;
+  top:10;
+  margin:30px;
+}
+
+#ufo2 {
+  position: absolute;
+  width: 50%;
+  top:10;
+}
+
+#van{
+    position: absolute;
+    right: 20;
+    bottom: -10px;
+    z-index:1;
+	width:50%;
+}
+
+#boat{
+    position: absolute;
+    right: 10;
+    bottom: 0;
+    z-index:3;
+	width:50%;
+}
+
+
+#plane {
+  position: fixed;
+  width: 50%;
+  top:10;
+}
+
+#helicopter {
+ position:absolute;
+  width: 50%;
+  top:0;
+}
+
+#bus{
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}
+
+#shark1{
+    position: absolute;
+  	right: 0;
+    top: 0;
+    z-index:1;
+	width:50%;
+}
+
+#shark2{
+    position: absolute;
+  	right: 0;
+    top: 0;
+    z-index:2;
+	width:50%;
+}
+
+}
+
+/*-- iPad 1Gen/2Gen iPad Mini, Kindle Fire --*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width:1024px) {
+
+#van{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}
+	
+#bus{
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}	
+	
+}
+/*-- Kindle Fire HD 8.9"--*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-device-width:1920px) {
+	
+	#van{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}
+	
+#bus{
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}	
+
+}
+	
+	
+	
+	
+	
