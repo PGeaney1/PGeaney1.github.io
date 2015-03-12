@@ -16,6 +16,7 @@
     
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/simplegrid.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/animations.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/animate.css" type="text/css" media="screen">
 
   
@@ -24,7 +25,8 @@
      <script src="js/skrollr.js"></script>
      <script src="js/iscroll.js"></script>
      <script src="js/jquery.scrolldepth.js"></script>
-     <script src="js/scrollReveal.js"></script>
+     <script src="js/jquery.scrollme.js"></script>
+     
  
      
      
@@ -49,7 +51,7 @@
 		
 	$(function(){
     $('html, body').animate({
-        scrollTop: $('#page').offset().top
+        scrollTop: $('#page3').offset().top
     }, 3000);
     return false;
 });
@@ -59,9 +61,22 @@ function loaded() {
     myScroll = new IScroll('#wrapper');
 }
 
+jQuery(function() {
+  jQuery.scrollDepth();
+  
+ });
+ 
+</script>  
 
-
-</script>   
+<script type="text/javascript">
+// makes sure the whole site is loaded
+jQuery(window).load(function() {
+        // will first fade out the loading animation
+	jQuery("#status").fadeOut();
+        // will fade out the whole DIV that covers the website.
+	jQuery("#preloader").delay(1000).fadeOut("slow");
+})
+</script> 
 
 
  
@@ -213,15 +228,15 @@ function loaded() {
     
     });
 	
-	jQuery(function() {
-  jQuery.scrollDepth();
-  
- });
+	
 </script>
 
 </head>
 <body>
-<!-- Google Tag Manager goes here !! -->
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K9PZMT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -269,25 +284,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<img id="bannerleft" src="images/banner1.png" alt="Banner" />
           
         
-        
+ 			
+            <a id="fancybox-manual-a" href="javascript:;" >   
+     		<img id="click1" src="images/asset5.png" class="animated infinite bounce"></a>
+       		
             
-       
-             <div id="parallax-bg1" data-stellar-ratio="1">
-				<img src="images/planet1.png" alt="planet"/>
-				
+            <div id="parallax-bg1" data-stellar-ratio="1">
+			<img src="images/planet1.png" alt="planet"/>
 			</div>
             
-             <div id="parallax-bg2" data-stellar-ratio="2">
-				<img src="images/planet2.png" alt="planet"/>
-				
+            <div id="parallax-bg2" data-stellar-ratio="2">
+			<img src="images/planet2.png" alt="planet"/>
 			</div>
     		
          
-        
-        
-     <a id="fancybox-manual-a" href="javascript:;">   
-        
-        <img id="click1" src="images/asset4.png" alt="" /></a>
+
+     
 
        
        
@@ -313,20 +325,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="col-1-1">
 <div class="stickem-container" id="sticky2">
 <div class="section s2" id="page2" data-stellar-background-ratio="0.5" class="box" data-vp-name="/section s2">
-          
+          <h1>Section 2</h1>
           
            <div id="plane">
            <img id="mainBg" src="images/airoplane.png" alt="airoplane"/>
            </div>
           
-          
+           
           
 		  <div class="aside stickem">
 		  <img src="images/balloon.png"/>
        	  </div>    
                
           <img id="bannerleft" src="images/banner1.png" alt="Banner" /> 
-            
+           
+           
+           <a id="fancybox-manual-b" href="javascript:;">   
+           <img id="click2" src="images/asset6.png" data-bottom-top="opacity: 1; transform: translateX(100px);"
+    data-center-bottom="opacity: 0.8; transform: translateX(1000px);"></a>
+          
+          
+
+          
       		 <div id="parallax-fg1" data-stellar-ratio="2">
 			 <img src="images/cloud4.png" alt="cloud"/>
 			 </div>	
@@ -344,9 +364,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
              
           
-          <h1>Section 2</h1>
+    
+	
          
-         
+  
 			
            
            
@@ -452,7 +473,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div id="parallax-cloudbg1" data-stellar-ratio="1">
 		<img src="images/octo1.png" alt="octo1"/>
 		</div>
-            
+   
+        <a id="fancybox-manual-c" href="javascript:;">   
+        <img id="click3" src="images/asset7.png" data-bottom-top="opacity: 0; transform: translateX(200px);"
+    data-center-bottom="opacity: 1; transform: translateX(0px);" /></a> 
+        
+       	  
            
         <div id="parallax-cloudbg2" data-stellar-ratio="1">
 		<img src="images/octo3.png" alt="octo1"/>
@@ -465,8 +491,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        <div id="shark1" data-1500="left: 0px;" data-2500="left: 760px;"/>
 	   <img src="images/shark1.png" alt="shark"/>
 	   </div>
-
+       
+  
 </div>
+
 
             
 <!--section 5-->            
@@ -491,7 +519,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<img src="images/octo1.png" alt="octo1"/>
 		</div>        
          
-	
+<a id="fancybox-manual-d" href="javascript:;">   
+<img id="click4" src="images/asset8.png" class="animated infinite bounce"/></a>	
     
 
 </div>
@@ -528,16 +557,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <script type="text/javascript" src="js/scripts.js"></script>
            <script type="text/javascript" src="js/smoothscroll.js"></script>
            <script type="text/javascript" src="js/jquery.stickem.js"></script>
-           <script type="text/javascript" src="js/jquery.stickem.js"></script>
+           
             <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+            
           <!--<script src="http://debug.edgeinspect.adobe.com/target/target-script-min.js#lukyanov"></script>-->
  
-<script type="text/javascript">   
+<script type="text/javascript">  
+
+
+ 
 $("#fancybox-manual-a").click(function() {
 				$.fancybox.open('images/asset3.png');
 			});
+			
+$("#fancybox-manual-b").click(function() {
+				$.fancybox.open('images/asset4.png');
+			});
+			
+$("#fancybox-manual-c").click(function() {
+				$.fancybox.open('images/asset4.png');
+			});
+			
+$("#fancybox-manual-d").click(function() {
+				$.fancybox.open('images/asset4.png');
+			});
+
+
 </script>
-          
-    
+ 
 </body>
 </html>
