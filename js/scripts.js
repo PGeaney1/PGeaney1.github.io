@@ -106,9 +106,8 @@ jQuery(function($) {
 	setSkrollr($('#plane'), [[0, 'transform:translateX(-100%)'], [750, 'transform:translateX(120%)'], [500, 'transform:translateX(-100%)']]);
     
 	setSkrollr($('#helicopter'), [[0, 'transform:translateX(-100%)'], [2000, 'transform:translateX(100%)'], [0, 'transform:translateX(-100%)']]);
-    setSkrollr($('#ufo1'), [[0, 'transform:translateX(-100%)'], [750, 'transform:translateX(100%)'], [1500, 'transform:translateX(-100%)']]);
     
-	setSkrollr($('#asset3'), [[100, 'transform:translateX(-100%)'], [2000, 'transform:translateX(100%)'], [0, 'transform:translateX(-100%)']]);
+   setSkrollr($('#ufo1'), [[0, 'transform:translateX(-100%)'], [750, 'transform:translateX(100%)'], [1500, 'transform:translateX(-100%)']]);
     
     skrollr.init({
         smoothScrolling: true,
@@ -133,4 +132,3 @@ $(function skrollrInit() {
 
 //execute function
 skrollrInit();
-

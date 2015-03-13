@@ -8,30 +8,22 @@
 		
         <!DOCTYPE HTML>
 
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"> 
-    
-	
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-    
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/simplegrid.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/animations.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/animate.css" type="text/css" media="screen">
-
   
      <script src="js/jquery-1.9.1.min.js"></script>
 	 <script src="js/modernizr.custom.js"></script>
      <script src="js/skrollr.js"></script>
      <script src="js/iscroll.js"></script>
      <script src="js/jquery.scrolldepth.js"></script>
-     <script src="js/jquery.scrollme.js"></script>
-     
- 
      
      
 
-<script type="text/javascript">
+    <script>
     $(document).ready(function(){
         $("#nav-mobile").html($("#nav-main").html());
         $("#nav-trigger span").click(function(){
@@ -60,23 +52,7 @@ var myScroll;
 function loaded() {
     myScroll = new IScroll('#wrapper');
 }
-
-jQuery(function() {
-  jQuery.scrollDepth();
-  
- });
- 
-</script>  
-
-<script type="text/javascript">
-// makes sure the whole site is loaded
-jQuery(window).load(function() {
-        // will first fade out the loading animation
-	jQuery("#status").fadeOut();
-        // will fade out the whole DIV that covers the website.
-	jQuery("#preloader").delay(1000).fadeOut("slow");
-})
-</script> 
+</script>   
 
 
  
@@ -120,136 +96,39 @@ jQuery(window).load(function() {
         
     </header>
     
-    	
-<script type="text/javascript">
-    /*
-    Code by Ani Lopez & Alejandro Scott
-    You are free to reuse and tweak it as you please
-    Opinions, questions? Drop us a line: info@dynamical.biz
-    */
-  	
-    // Parameters to Configure
-    var panelClass = '.box'; // class identifier for the panels to track
-    var marginTop = 15; // distance above window top border
-    var marginBottom = 70;  // distance below window top border
-    var waittoVPV = 3; // time to wait to fire a virtual pageview in seconds
-  
-    // Your Google Analytics stuff goes here
-  
-
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-60468675-1', 'auto');
-  ga('send', 'pageview');
- 
+  ga('create', 'UA-60086554-1', 'auto');
+  ga('send', 'Event Tracking');
+  setTimeout("ga('send', 'event', { eventCategory: '30 seconds on page', eventAction: 'Read' })", 30000);
   
-    // No need to change anything below here --------------------------------------------------------------------------------
-    var counter = 0;
-    var timer = null;
-    var panneltops = new Object;
-    var maxBottom = 0;
-    var currentId = '';
-    var lastId = '';
   
-    // Watch + fire Virtual Pageviews
-    function tictac(){
-      counter++;
-      if(counter == waittoVPV && currentId != lastId) {
-        resetInterval();
-        lastId = currentId;
-        analyticsStuff();
-      } else if (currentId == lastId) {
-        resetInterval();
-      }
-    }
-    
-    // Starts timer
-    function startInterval(){
-      timer= setInterval("tictac()", 1000);
-      return timer;
-    }
-    
-    // Reset timer
-    function resetInterval() {
-      clearInterval(timer);
-      counter = 0;
-    }
-    
-    function findFirstIdInbox(topBox, bottomBox) {
-      var currentPanelId = '';
-      $.each(panneltops, function(index, top) {
-        var objHeight = $('#' + index).outerHeight();
-        var bottom = top + objHeight;
-        if (topBox <= top && top <= bottomBox) {
-          currentPanelId = index;
-          return false;
-        }
-      });
-      return currentPanelId;
-    }
-    
-    $(document).ready(function() {
-   
-      // Grabs all pannels ID's and their distance to top
-      $(panelClass).each(function() {
-        var objBox = $(this);
-        var divid = objBox.prop('id');
-        panneltops[divid] = objBox.offset().top;
-        var objHeight = objBox.outerHeight();
-        var bottom = top + objHeight;
-        if (bottom > maxBottom) {
-          maxBottom = bottom;
-        }
-      });
-    
-      // Checks for scroll
-      $(document).scroll(function() {
-        resetInterval();
-        var currentScrollTop = $(this).scrollTop();
-        var topBox = currentScrollTop;
-        if (topBox <= currentScrollTop) {
-          topBox = currentScrollTop - marginTop;
-        }
-        var bottomBox = currentScrollTop + marginBottom;
-        currentId = findFirstIdInbox(topBox, bottomBox);
-    
-        if (currentId != '') {
-          var elementPosition =  $('#' + currentId).offset().top;
-          var distancetoTop = currentScrollTop - elementPosition;
-          startInterval();
-        } else {
-          lastId = '';
-          resetInterval();
-        }
-      });
-    
-    });
-	
-	
-</script>
+ jQuery(function() {
+  jQuery.scrollDepth();
+});
+
+
+</script>	
 
 </head>
 <body>
-<div id="preloader">
-  <div id="status">&nbsp;</div>
-</div>
-
 <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K9PZMT"
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5QXJ4H"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K9PZMT');</script>
+})(window,document,'script','dataLayer','GTM-5QXJ4H');</script>
 <!-- End Google Tag Manager -->
 
 
 <div id="spaceBg" data-stellar-ratio="1">
-<img id="mainBg" src="images/spaceclouds.png" alt="spaceclouds" />
+<img id="mainBg" src="images/spaceclouds.png" alt="spaceclouds"/>
 </div>
 
 <div id="wrapper">
@@ -265,7 +144,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="grid grid-pad">
 <div class="col-1-1">
 <div class="stickem-container" id="sticky1">
-<div class="section s1" id="page1" data-stellar-background-ratio="0.5" class="box" data-vp-name="/section s1">
+<div class="section s1" id="page1" data-stellar-background-ratio="0.5">
 			
         <h1>Section 1</h1>
            
@@ -280,31 +159,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<img src="images/spaceship.png"/>
         </div>
   		
-
+		
 		<img id="bannerleft" src="images/banner1.png" alt="Banner" />
           
         
- 			
-            <a id="fancybox-manual-a" href="javascript:;" >   
-     		<img id="click1" src="images/asset5.png" class="animated infinite bounce"></a>
-       		
+        
             
-            <div id="parallax-bg1" data-stellar-ratio="1">
-			<img src="images/planet1.png" alt="planet"/>
+       
+             <div id="parallax-bg1" data-stellar-ratio="1">
+				<img src="images/planet1.png" alt="planet"/>
+				
 			</div>
             
-            <div id="parallax-bg2" data-stellar-ratio="2">
-			<img src="images/planet2.png" alt="planet"/>
+             <div id="parallax-bg2" data-stellar-ratio="2">
+				<img src="images/planet2.png" alt="planet"/>
+				
 			</div>
     		
          
+              
+		
+             
+         
+              
 
-     
-
        
+      
        
-       
-     	
 </div>   
 </div>
 </div>
@@ -324,29 +205,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="grid grid-pad">
 <div class="col-1-1">
 <div class="stickem-container" id="sticky2">
-<div class="section s2" id="page2" data-stellar-background-ratio="0.5" class="box" data-vp-name="/section s2">
-          <h1>Section 2</h1>
+<div class="section s2" id="page2" data-stellar-background-ratio="0.5">
+          
           
            <div id="plane">
            <img id="mainBg" src="images/airoplane.png" alt="airoplane"/>
            </div>
           
-           
+          
           
 		  <div class="aside stickem">
 		  <img src="images/balloon.png"/>
        	  </div>    
                
           <img id="bannerleft" src="images/banner1.png" alt="Banner" /> 
-           
-           
-           <a id="fancybox-manual-b" href="javascript:;">   
-           <img id="click2" src="images/asset6.png" data-bottom-top="opacity: 1; transform: translateX(100px);"
-    data-center-bottom="opacity: 0.8; transform: translateX(500px);"></a>
-          
-          
-
-          
+            
       		 <div id="parallax-fg1" data-stellar-ratio="2">
 			 <img src="images/cloud4.png" alt="cloud"/>
 			 </div>	
@@ -364,10 +237,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
              
           
-    
-	
+          <h1>Section 2</h1>
          
-  
+         
 			
            
            
@@ -400,7 +272,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 <!--section 3-->              
             
-<div class="section s3" id="page3" data-stellar-background-ratio="0.5" class="box" data-vp-name="/section s3">
+<div class="section s3" id="page3" data-stellar-background-ratio="0.5">
 		
         
         
@@ -453,7 +325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 <div class="grid grid-pad">
 <div class="col-1-1">
-<div class="stickem-container" id="sticky3" data-stellar-background-ratio="0.5" class="box" data-vp-name="/section s4">
+<div class="stickem-container" id="sticky3" data-stellar-background-ratio="0.5">
 
 <div class="section s4" id="page4" data-stellar-background-ratio="0.5">
             
@@ -473,12 +345,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div id="parallax-cloudbg1" data-stellar-ratio="1">
 		<img src="images/octo1.png" alt="octo1"/>
 		</div>
-   
-        <a id="fancybox-manual-c" href="javascript:;">   
-        <img id="click3" src="images/asset7.png" data-bottom-top="opacity: 0; transform: translateX(200px);"
-    data-center-bottom="opacity: 1; transform: translateX(0px);" /></a> 
-        
-       	  
+            
            
         <div id="parallax-cloudbg2" data-stellar-ratio="1">
 		<img src="images/octo3.png" alt="octo1"/>
@@ -491,15 +358,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        <div id="shark1" data-1500="left: 0px;" data-2500="left: 760px;"/>
 	   <img src="images/shark1.png" alt="shark"/>
 	   </div>
-       
-  
+
 </div>
 
-
             
-<!--section 5-->            
+<!--section 4-->            
             
-<div class="section s5" id="page5" data-stellar-background-ratio="0.5" class="box" data-vp-name="/section s5">
+<div class="section s5" id="page5" data-stellar-background-ratio="0.5">
 		
         
 <div id="shark2" data-2500="left: 560px;" data-3000="left: 50px;"/>
@@ -519,8 +384,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<img src="images/octo1.png" alt="octo1"/>
 		</div>        
          
-<a id="fancybox-manual-d" href="javascript:;">   
-<img id="click4" src="images/asset8.png" class="animated infinite bounce"/></a>	
+	
     
 
 </div>
@@ -557,33 +421,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <script type="text/javascript" src="js/scripts.js"></script>
            <script type="text/javascript" src="js/smoothscroll.js"></script>
            <script type="text/javascript" src="js/jquery.stickem.js"></script>
-           
-            <script type="text/javascript" src="js/jquery.fancybox.js"></script>
-            
-          <!--<script src="http://debug.edgeinspect.adobe.com/target/target-script-min.js#lukyanov"></script>-->
- 
-<script type="text/javascript">  
+           <script type="text/javascript" src="js/jquery.stickem.js"></script>
+          <script src="http://debug.edgeinspect.adobe.com/target/target-script-min.js#lukyanov"></script>
+    
+<script>
+var ParallaxPageView = function(selectors) { 
+var sections = {
+page1: $(selectors.page1),
+page2: $(selectors.page2), 
+page3: $(selectors.page3),
+page4: $(selectors.page4)	
+}
+return { 
+onViewpage1Section: function(handler) { 
+sections.page1.waypoint(handler); 
+},
+
+onViewpage2Section: function(handler) { 
+sections.page2.waypoint(handler); 
+},
+
+onViewpage3Section: function(handler) { 
+sections.page3.waypoint(handler); 
+},
+
+onViewpage4Section: function(handler) { 
+sections.page4.waypoint(handler);
+} 
+} 
+}
 
 
- 
-$("#fancybox-manual-a").click(function() {
-				$.fancybox.open('images/asset3.png');
-			});
-			
-$("#fancybox-manual-b").click(function() {
-				$.fancybox.open('images/asset4.png');
-			});
-			
-$("#fancybox-manual-c").click(function() {
-				$.fancybox.open('images/asset4.png');
-			});
-			
-$("#fancybox-manual-d").click(function() {
-				$.fancybox.open('images/asset4.png');
-			});
+var ParallaxTracker = function (selectors) { 
+var view = new ParallaxPageView(selectors); 
+var recordedViews = {} 
+function recordView(section) { 
+return function() { 
+if(!recordedViews[section]) { 
+ga('send', 'event', 'homepage', 'section_view', section); 
+recordedViews[section] = true; 
+} 
+} 
+} 
+view.onViewpage1Section(recordView('page1')); 
+view.onviewpage2Section(recordView('page2')); 
+view.onViewpage3Section(recordView('page3')); 
+view.onViewpage4Section(recordView('page4')); 
+}
 
-
+var myPageTracker = new ParallaxTracker({ 
+page1: '#page1', 
+page2: '#page2', 
+page3: '#page3',
+page4: '#page4'
+}); 
 </script>
- 
+          
+    
 </body>
 </html>
