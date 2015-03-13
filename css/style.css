@@ -1,5 +1,29 @@
-/* Global */		
+/* Global */
+		
+/* Preloader */
 
+#preloader  {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #b4dcd1;
+     z-index: 99;
+    height: 100%;
+ }
+
+#status  {
+     width: 200px;
+     height: 200px;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     background-image: url(../images/page-loader.gif);
+     background-repeat: no-repeat;
+     background-position: center;
+     margin: -100px 0 0 -100px;
+ }
 
 img {
 	max-width: 100%;
@@ -10,6 +34,7 @@ img {
 
 body {
 	background-color: #214d58;
+	
 }
 
 a:link {
@@ -294,7 +319,7 @@ nav#nav-mobile a:hover {
     color: #fff; 
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 700px) {
 #nav-trigger {
     display: block; 
 }
@@ -556,10 +581,40 @@ nav#nav-mobile {
 
 .mobile #scroller {
 	height: 3500px;
-	
 }
 
-@media all and (max-width: 960px) {
+#click1{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:4;
+}
+
+#click2{
+	position:absolute;
+	bottom:0;
+	left: 40px;
+	z-index:5;
+}
+
+#click3{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:5;
+}
+
+#click4{
+	position:absolute;
+	bottom:120px;
+	left:0;
+	z-index:5;
+}
+
+
+
+
+@media all and (max-width: 700px) {
 .article,menu, nav, section { 
     	display: block;
 }
@@ -634,7 +689,7 @@ nav#nav-mobile {
  	-o-transform: translate(-50%, -50%); /* Opera */
 	overflow:hidden;
 	-webkit-transform: translateZ(0);
-	z-index:6;
+	z-index:8;
 	position: -webkit-sticky;
     position: -moz-sticky;
     position: -ms-sticky;
@@ -784,10 +839,46 @@ nav#nav-mobile {
 	width:50%;
 }
 
+#click1{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:4;
+	width:70%;
+}
+
+#click2{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:4;
+	width:70%;
+}
+
+#click3{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:4;
+	width:70%;
+}
+
+#click4{
+	position:absolute;
+	bottom:30px;
+	right:0;
+	z-index:4;
+	width:70%;
+}
+
 }
 
 /*-- iPad 1Gen/2Gen iPad Mini, Kindle Fire --*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width:1024px) {
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
 
 #van{
     position: absolute;
@@ -804,6 +895,30 @@ nav#nav-mobile {
     z-index:2;
 	width:50%;
 }	
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+#van{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}
+	
+#bus{
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}	
+
+}
+
 	
 }
 /*-- Kindle Fire HD 8.9"--*/
