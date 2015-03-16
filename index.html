@@ -27,6 +27,7 @@
      <script src="js/jquery.scrolldepth.js"></script>
      <script src="js/jquery.scrollme.js"></script>
      <script src="js/jquery.waypoints.js"></script>
+      <script src="js/waypoints-vp.js"></script>
      
  
      
@@ -120,82 +121,6 @@ jQuery(window).load(function() {
         
         
     </header>
-    
-    	
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-60468675-1', 'auto');
-
-</script>
-
-<script type="text/javascript">
-var ParallaxPageView = function(selectors) { 
-var section = {
-page1: $(selectors.page1),
-page2: $(selectors.page2), 
-page3: $(selectors.page3),
-page4: $(selectors.page4)	
-}
-
-return { 
-onViewpage1Section: function(handler) { 
-section.page1.waypoint(handler); 
-},
-
-onViewpage2Section: function(handler) { 
-section.page2.waypoint(handler); 
-},
-
-onViewpage3Section: function(handler) { 
-section.page3.waypoint(handler); 
-},
-
-onViewpage4Section: function(handler) { 
-section.page4.waypoint(handler);
-} 
-} 
-}
-
-
-var ParallaxTracker = function (selectors) { 
-
-var view = new ParallaxPageView(selectors); 
-var recordedViews = {} 
-
-function recordView(section) { 
-return function() { 
-if(!recordedViews[section]) { 
-ga('send', 'event', 'homepage', 'section_view', section); 
-recordedViews[section] = true; 
-} 
-} 
-} 
-
-var view = new ParallaxPageView(selectors);
-
-view.onViewPage1Section(recordView('page1')); 
-view.onviewPage2Section(recordView('page2')); 
-view.onViewPage3Section(recordView('page3')); 
-view.onViewPage4Section(recordView('page4')); 
-
- 
-
-ga('send', 'event', 'homepage', 'section_view', section);
-
-}
-
-var myPageTracker = new ParallaxTracker({ 
-page1: '#page1', 
-page2: '#page2', 
-page3: '#page3',
-page4: '#page4'
-}); 
-</script>
-
 </head>
 <body>
 <div id="preloader">
@@ -203,13 +128,13 @@ page4: '#page4'
 </div>
 
 <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K9PZMT"
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KQMBFD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K9PZMT');</script>
+})(window,document,'script','dataLayer','GTM-KQMBFD');</script>
 <!-- End Google Tag Manager -->
 
 
@@ -550,6 +475,15 @@ $("#fancybox-manual-d").click(function() {
 
 
 </script>
+
+<script type="text/javascript">
+		$('#page1').waypointVirtualPage({url: '/page1', pageTitle:'page1'});
+		$('#page2').waypointVirtualPage({url: '/page2', pageTitle:'page2'});
+		$('#page3').waypointVirtualPage({url: '/page3', pageTitle:'page3'});
+		$('#page4').waypointVirtualPage({url: '/page4', pageTitle:'page4'});
+		$('#page5').waypointVirtualPage({url: '/page5', pageTitle:'page5'});
+
+	</script>
  
 </body>
 </html>
