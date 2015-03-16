@@ -475,15 +475,19 @@ $("#fancybox-manual-d").click(function() {
 
 
 </script>
-
 <script type="text/javascript">
-		$('#page1').waypointVirtualPage({url: '/page1', pageTitle:'page1'});
+    jQuery(document).ready(function(){
+		
+        $('#page1').waypointVirtualPage({url: '/page1', pageTitle:'page1'});
+	
 		$('#page2').waypointVirtualPage({url: '/page2', pageTitle:'page2'});
 		$('#page3').waypointVirtualPage({url: '/page3', pageTitle:'page3'});
 		$('#page4').waypointVirtualPage({url: '/page4', pageTitle:'page4'});
 		$('#page5').waypointVirtualPage({url: '/page5', pageTitle:'page5'});
 
-	</script>
- 
+})
+
+</script>
+
 </body>
 </html>
