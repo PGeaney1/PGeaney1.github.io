@@ -131,6 +131,5 @@ $(function skrollrInit() {
 
 });
 
-//execute function
-skrollrInit();
+
 
