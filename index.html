@@ -79,7 +79,16 @@ jQuery(window).load(function() {
 	jQuery("#preloader").delay(1000).fadeOut("slow");
 })
 </script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-60468675-1', 'auto');
+  
+
+</script>
 
  
 <header>
@@ -127,13 +136,13 @@ jQuery(window).load(function() {
   <div id="status">&nbsp;</div>
 </div>
 <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KQMBFD"
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5VJSXP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KQMBFD');</script>
+})(window,document,'script','dataLayer','GTM-5VJSXP');</script>
 <!-- End Google Tag Manager -->
 
 
@@ -479,10 +488,10 @@ $("#fancybox-manual-d").click(function() {
 		
         $('#page1').waypointVirtualPage({virtualPageURL: '/page1', pageTitle:'page1'});
 	
-		$('#page2').waypointVirtualPage({virtualPageURL: '/page2', pageTitle:'page2'});
-		$('#page3').waypointVirtualPage({virtualPageURL: '/page3', pageTitle:'page3'});
-		$('#page4').waypointVirtualPage({virtualPageURL: '/page4', pageTitle:'page4'});
-		$('#page5').waypointVirtualPage({virtualPageURL: '/page5', pageTitle:'page5'});
+		$('#page2').waypointVirtualPage({url: '/page2', pageTitle:'page2'});
+		$('#page3').waypointVirtualPage({url: '/page3', pageTitle:'page3'});
+		$('#page4').waypointVirtualPage({url: '/page4', pageTitle:'page4'});
+		$('#page5').waypointVirtualPage({url: '/page5', pageTitle:'page5'});
 
 })
 

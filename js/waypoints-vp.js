@@ -31,7 +31,7 @@
             //  Google Tag manager virtual page
             dataLayer.push({
                 'event': '_d_GAVirtualPageview',
-                'virtualPageview': settings.virtualPageURL,
+                'virtualPageview': settings.url,
                 'virtualPageviewTitle': settings.pageTitle
             });
         };
