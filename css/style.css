@@ -1,7 +1,10 @@
 /* Global */
 		
 /* Preloader */
-
+#sticky {position:fixed; top:0; background:rgba(255,0,0,0.7); width: 500px; height: 70px; left:200px; z-index:8;}
+		#stickynote {color:black; margin:22px 0 0 22px;}
+		
+		
 #preloader  {
      position: fixed;
      top: 0;

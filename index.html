@@ -140,7 +140,7 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
     // Your Google Analytics stuff goes here
     function analyticsStuff(){
 		
-	
+	 $("#stickynote").html('Fired virtual pageview: ' + $('#' + currentId).attr('data-vp-name')); 
 	ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name'));
 	
     }
@@ -156,6 +156,8 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
     // Watch + fire Virtual Pageviews
     function tictac(){
       counter++;
+      console.log('Secs: ' + counter);
+      $("#stickynote").html('Timer in seconds: ' + counter); // remove this
       if(counter == waittoVPV && currentId != lastId) {
         resetInterval();
         lastId = currentId;
@@ -240,6 +242,7 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
 <div id="scroller">   
  
  <!--section 1-->
+
             
 <div id="spaceBg" data-stellar-ratio="1">
 </div>
@@ -249,8 +252,10 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
 <div class="grid grid-pad">
 <div class="col-1-1">
 <div class="stickem-container" id="sticky1">
-<div id="page1" class="section s1" data-stellar-background-ratio="0.5" class="box" data-vp-name="/page1">
-			
+<div id="page1" class="section s1" data-stellar-background-ratio="0.5">
+<div id="a" class="box" data-vp-name="/pannel-a">	
+	
+        <div id="sticky"><p id="stickynote"></p></div>	
         <h1>Section 1</h1>
            
         <div id="ufo1">
@@ -293,6 +298,7 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
 </div>
 </div>
 </div>
+</div>
 
 
 
@@ -308,7 +314,9 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
 <div class="grid grid-pad">
 <div class="col-1-1">
 <div class="stickem-container" id="sticky2">
-<div class="section s2" id="page2" data-stellar-background-ratio="0.5" class="box" data-vp-name="/page2">
+<div class="section s2" id="page2" data-stellar-background-ratio="0.5">
+<div id="b" class="box" data-vp-name="/pannel-b">
+
           <h1>Section 2</h1>
           
            <div id="plane">
@@ -378,14 +386,15 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
          
         
 </div>
-
+</div>
 
 
 
     
 <!--section 3-->              
             
-<div class="section s3" id="page3" data-stellar-background-ratio="0.5" class="box" data-vp-name="/page3">
+<div class="section s3" id="page3" data-stellar-background-ratio="0.5">
+<div id="c" class="box" data-vp-name="/pannel-c">
 		
         
         
@@ -424,6 +433,7 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
 </div>
 </div>
 </div>
+</div>
 
 <!--section 4-->
 
@@ -438,7 +448,8 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
     
 <div class="grid grid-pad">
 <div class="col-1-1">
-<div class="stickem-container" id="sticky3" data-stellar-background-ratio="0.5" class="box" data-vp-name="/page4">
+<div class="stickem-container" id="sticky3" data-stellar-background-ratio="0.5">
+<div id="d" class="box" data-vp-name="/pannel-d">
 
 <div class="section s4" id="page4" data-stellar-background-ratio="0.5">
             
@@ -484,7 +495,8 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
             
 <!--section 5-->            
             
-<div class="section s5" id="page5" data-stellar-background-ratio="0.5" class="box" data-vp-name="/page5">
+<div class="section s5" id="page5" data-stellar-background-ratio="0.5">
+<div id="e" class="box" data-vp-name="/pannel-e">
 		
         
 <div id="shark2" data-2500="left: 560px;" data-3000="left: 50px;"/>
@@ -507,7 +519,7 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
 <a id="fancybox-manual-d" href="javascript:;"  onclick="ga('send','event','Section 5','Section 5')">   
 <img id="click4" src="images/asset8.png" class="animated infinite bounce"/></a>	
     
-
+</div>
 </div>
 </div>
 </div>
