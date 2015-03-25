@@ -110,7 +110,9 @@ jQuery(function($) {
     
 	setSkrollr($('#asset3'), [[100, 'transform:translateX(-100%)'], [2000, 'transform:translateX(100%)'], [0, 'transform:translateX(-100%)']]);
     
-   
+  skrollr.init({
+        smoothScrolling: true,
+    });
 });
 
 
@@ -119,7 +121,7 @@ $(function skrollrInit() {
 
     //initialize skrollr
     skrollr.init({
-        smoothScrolling: true
+        smoothScrolling: false
     });
 
     // disable skrollr if using handheld device
@@ -129,5 +131,6 @@ $(function skrollrInit() {
 
 });
 
-
+//execute function
+skrollrInit();
 
