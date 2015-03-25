@@ -119,7 +119,7 @@ $(function skrollrInit() {
 
     //initialize skrollr
     skrollr.init({
-        smoothScrolling: false
+        smoothScrolling: true
     });
 
     // disable skrollr if using handheld device
