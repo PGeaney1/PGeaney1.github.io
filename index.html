@@ -82,7 +82,7 @@ jQuery(window).load(function() {
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
+ga('create', 'UA-60468675-1', 'auto');
   
 
 </script>
@@ -140,7 +140,9 @@ ga('create', 'UA-60468675-1', 'http://pgeaney1.github.io/');
     // Your Google Analytics stuff goes here
     function analyticsStuff(){
 		
-	 $("#stickynote").html('Fired virtual pageview: ' + $('#' + currentId).attr('data-vp-name')); 
+	 $("#stickynote").html('Sent an event: ' + $('#' + currentId).attr('data-vp-name')); 
+	 
+	ga('create', 'UA-60468675-1', 'auto');
 	ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name'));
 	
     }
