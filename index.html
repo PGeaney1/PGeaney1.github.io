@@ -143,8 +143,27 @@ ga('send', 'pageview');
 		
 	 $("#stickynote").html('Sent an event: ' + $('#' + currentId).attr('data-vp-name')); 
 	 
+	ga('send','event','allsections','allsections')
 	
-	ga('send','event', $('#' + currentId).attr('data-vpn-name'));
+	ga('send', 'event', $('#' + currentId).attr('data-vpn-name')); 
+	
+	
+	
+	$("box").scroll(function() {
+		ga('send', 'event', $('#' + currentId).attr('data-vpn-name')); 
+		
+		ga('send','event','thesections','thesections')
+    
+}); 
+	
+	
+	
+	
+	
+	// Tracking Virtual pageviews with new Universal Analytics
+    //_gaq.push(['_trackPageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with old Google Analytics
+	
+	
 	
     }
   
