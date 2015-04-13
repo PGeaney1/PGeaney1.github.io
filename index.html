@@ -143,21 +143,28 @@ ga('send', 'pageview');
 		
 	 $("#stickynote").html('Sent an event: ' + $('#' + currentId).attr('data-vp-name')); 
 	 
-	ga('send','event','allsections','allsections')
+	ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name'));
 	
-	ga('send', 'event', $('#' + currentId).attr('data-vpn-name')); 
+	ga('send', 'pageview', {
+  'page': $('#' + currentId).attr('data-vpn-name'),
+  'title': 'scroll Section'
+});
+	 
+	ga('send', 'event', 'button', 'scroll', $('#' + currentId).attr('data-vpn-name'));
+	
+	ga('send', {
+  'hitType': 'event',          // Required.
+  'eventCategory': 'button',   // Required.
+  'eventAction': 'click',      // Required.
+  'eventLabel': 'Sent an event: ' + $('#' + currentId).attr('data-vp-name') 
+  
+   // ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with new Universal Analytics
+ 
+});
 	
 	
 	
-	$("box").scroll(function() {
-		ga('send', 'event', $('#' + currentId).attr('data-vpn-name')); 
-		
-		ga('send','event','thesections','thesections')
-    
-}); 
-	
-	
-	
+
 	
 	
 	// Tracking Virtual pageviews with new Universal Analytics
@@ -296,7 +303,9 @@ ga('send', 'pageview');
           
         
  			
-            <a id="fancybox-manual-a" href="javascript:;"  onclick="ga('send','event','Section 1','Section 1')">     
+            <a id="fancybox-manual-a" href="javascript:;"  onclick="ga('send', 'event', 'button', 'click', 'Section 1')">   
+            
+             
      		<img id="click1" src="images/asset5.png" class="animated infinite bounce"></a>
        		
             
@@ -354,7 +363,7 @@ ga('send', 'pageview');
           <img id="bannerleft" src="images/banner1.png" alt="Banner" /> 
            
            
-           <a id="fancybox-manual-b" href="javascript:;"  onclick="ga('send','event','Section 2','Section 2')">  
+           <a id="fancybox-manual-b" href="javascript:;"  onclick="ga('send', 'event', 'button', 'click', 'Section 2')">  
             
            <img id="click2" src="images/asset6.png" data-bottom-top="opacity: 1; transform: translateX(100px);"
     data-center-bottom="opacity: 0.8; transform: translateX(500px);"></a>
@@ -492,7 +501,7 @@ ga('send', 'pageview');
 		<img src="images/octo1.png" alt="octo1"/>
 		</div>
    
-        <a id="fancybox-manual-c" href="javascript:;"  onclick="ga('send','event','Section 4','Section 4')">   
+        <a id="fancybox-manual-c" href="javascript:;"  onclick="ga('send', 'event', 'button', 'click','Section 4')">  
         <img id="click3" src="images/asset7.png" data-bottom-top="opacity: 0; transform: translateX(200px);"
     data-center-bottom="opacity: 1; transform: translateX(0px);" /></a> 
         
@@ -538,7 +547,7 @@ ga('send', 'pageview');
 		<img src="images/octo1.png" alt="octo1"/>
 		</div>        
          
-<a id="fancybox-manual-d" href="javascript:;"  onclick="ga('send','event','Section 5','Section 5')">   
+<a id="fancybox-manual-d" href="javascript:;"  onclick="ga('send', 'event', 'button', 'click', 'Section 5')">  
 <img id="click4" src="images/asset8.png" class="animated infinite bounce"/></a>	
     
 </div>
