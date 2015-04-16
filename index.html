@@ -83,7 +83,7 @@ jQuery(window).load(function() {
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-60468675-1', 'auto');
-ga('send', 'pageview');
+
   
 
 </script>
@@ -147,14 +147,14 @@ ga('send', 'pageview');
 	
 	ga('send', 'pageview', {
   'page': $('#' + currentId).attr('data-vpn-name'),
-  'title': 'scroll Section'
+  'title': 'scroll Section1'
 });
 	 
-	ga('send', 'event', 'button', 'scroll', $('#' + currentId).attr('data-vpn-name'));
+	ga('send', 'event', 'button1', 'scroll2', $('#' + currentId).attr('data-vpn-name'));
 	
 	ga('send', {
   'hitType': 'event',          // Required.
-  'eventCategory': 'button',   // Required.
+  'eventCategory': 'button2',   // Required.
   'eventAction': 'click',      // Required.
   'eventLabel': 'Sent an event: ' + $('#' + currentId).attr('data-vp-name') 
   
