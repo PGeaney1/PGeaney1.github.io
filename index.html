@@ -83,7 +83,7 @@ jQuery(window).load(function() {
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-60468675-1', 'auto');
-
+ga('send', 'pageview');
   
 
 </script>
@@ -143,20 +143,6 @@ ga('create', 'UA-60468675-1', 'auto');
 		
 	 $("#stickynote").html('Sent an event: ' + $('#' + currentId).attr('data-vp-name')); 
 	 
-<<<<<<< HEAD
-	 ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name'));
-	 ga('send', 'pageview', {
-        'page': $('#' + currentId).attr('data-vpn-name'),
-        'title': 'scroll Section test1'
-});
-	 
-	ga('send', 'event', 'scroll Section test3', 'scroll Section test3', $    ('#' + currentId).attr('data-vpn-name'));
-	
-	ga('send', {
-  'hitType': 'event',          // Required.
-  'eventCategory': 'scroll Section test2',   // Required.
-  'eventAction': 'scroll Section test2',      // Required.
-=======
 	ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name'));
 	
 	ga('send', 'pageview', {
@@ -170,7 +156,6 @@ ga('create', 'UA-60468675-1', 'auto');
   'hitType': 'event',          // Required.
   'eventCategory': 'button',   // Required.
   'eventAction': 'click',      // Required.
->>>>>>> origin/master
   'eventLabel': 'Sent an event: ' + $('#' + currentId).attr('data-vp-name') 
   
    // ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with new Universal Analytics
