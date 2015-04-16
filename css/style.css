@@ -614,6 +614,22 @@ nav#nav-mobile {
 	z-index:5;
 }
 
+#teenhead1{
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:5;
+	width:45%;
+}
+
+#teenhead2{
+	position:absolute;
+	top:550px;
+	left:0;
+	z-index:5;
+	width:45%;
+}
+
 
 
 

@@ -83,7 +83,7 @@ jQuery(window).load(function() {
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-60468675-1', 'auto');
-ga('send', 'pageview');
+
   
 
 </script>
@@ -143,8 +143,33 @@ ga('send', 'pageview');
 		
 	 $("#stickynote").html('Sent an event: ' + $('#' + currentId).attr('data-vp-name')); 
 	 
+	 ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name'));
+	 ga('send', 'pageview', {
+        'page': $('#' + currentId).attr('data-vpn-name'),
+        'title': 'scroll Section test1'
+});
+	 
+	ga('send', 'event', 'scroll Section test3', 'scroll Section test3', $    ('#' + currentId).attr('data-vpn-name'));
 	
-	ga('send','event', $('#' + currentId).attr('data-vpn-name'));
+	ga('send', {
+  'hitType': 'event',          // Required.
+  'eventCategory': 'scroll Section test2',   // Required.
+  'eventAction': 'scroll Section test2',      // Required.
+  'eventLabel': 'Sent an event: ' + $('#' + currentId).attr('data-vp-name') 
+  
+   // ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with new Universal Analytics
+ 
+});
+	
+	
+	
+
+	
+	
+	// Tracking Virtual pageviews with new Universal Analytics
+    //_gaq.push(['_trackPageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with old Google Analytics
+	
+	
 	
     }
   
@@ -320,13 +345,17 @@ ga('send', 'pageview');
 <div class="section s2" id="page2" data-stellar-background-ratio="0.5">
 <div id="b" class="box" data-vp-name="/pannel-b">
 
-          <h1>Section 2</h1>
+          
           
            <div id="plane">
            <img id="mainBg" src="images/airoplane.png" alt="airoplane"/>
            </div>
           
-           
+                      <a id="fancybox-manual-e" href="javascript:;"  onclick="ga('send','event','Good Mental Health','Good Mental Health')"><img id="teenhead1" src="images/teenhead1.png" class="animated infinite pulse"></a>
+          
+          
+          
+        
           
 		  <div class="aside stickem">
 		  <img src="images/balloon.png"/>
@@ -355,7 +384,7 @@ ga('send', 'pageview');
             
            
             <div id="parallax-cloudbg2" data-stellar-ratio="1">
-			<img src="images/cloud2.png" alt="cloud"/>
+			
 			</div>
             
              
@@ -383,7 +412,8 @@ ga('send', 'pageview');
 		<img src="images/cloud4.png" alt="cloud"/>
 		</div>         
          
-        
+         <a id="fancybox-manual-f" href="javascript:;"  onclick="ga('send','event','bad Mental Health','bad Mental Health')"><img id="teenhead2" src="images/teenhead2.png" class="animated infinite pulse"></a>
+          
         
         
          
@@ -580,6 +610,13 @@ $("#fancybox-manual-c").click(function() {
 			
 $("#fancybox-manual-d").click(function() {
 				$.fancybox.open('images/asset4.png');
+			});
+			
+$("#fancybox-manual-e").click(function() {
+				$.fancybox.open('images/goodmentalhealth.png');
+			});
+$("#fancybox-manual-f").click(function() {
+				$.fancybox.open('images/badmentalhealth.png');
 			});
 
 
