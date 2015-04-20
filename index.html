@@ -13,7 +13,7 @@
     
 	
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-    
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Asap">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/simplegrid.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/animations.css" type="text/css" media="screen">
@@ -87,7 +87,14 @@ ga('create', 'UA-60468675-1', 'auto');
 </script>
 <script>
 $(function(){
-	$('#carousel').infiniteCarousel({
+	$('#carousel1').infiniteCarousel({
+		displayTime: 5000,
+		
+	});
+});
+
+$(function(){
+	$('#carousel2').infiniteCarousel({
 		displayTime: 5000,
 		
 	});
@@ -102,11 +109,12 @@ $(function(){
         <nav id="nav-main">
            <ul class="navigation">
                
-                <li data-slide="1"><a class="smoothScroll" href="#page1">Self Esteem & Confidence</a></li>
+                <li data-slide="1"><a class="smoothScroll" href="#page1">Self Esteem</a></li>
                 <li data-slide="2"><a class="smoothScroll" href="#page2">Mental Health</a></li>
                  <li data-slide="3"><a class="smoothScroll" href="#page3">Lets Begin</a></li>
                <li data-slide="4"><a class="smoothScroll" href="#page4">Depression</a></li>
                 <li data-slide="5"><a class="smoothScroll" href="#page5">Bullying</a></li>
+                 <li data-slide="5"><a class="smoothScroll" a id="fancybox-manual-g" href="javascript:;"  onclick="ga('send','event','I need help','I need help')">I need help</a></li>
             </ul>
         </nav>
         <nav id="nav-mobile"></nav>
@@ -114,7 +122,7 @@ $(function(){
         <nav id="primary">
 				 <ul class="navigation">
 					<li>
-			<a class="smoothScroll"  href="#page1">Self Esteem & Confidence</a>
+			<a class="smoothScroll"  href="#page1">Self Esteem</a>
 					</li>
 					<li>
 			<a class="smoothScroll" href="#page2">Mental Health</a>
@@ -312,8 +320,8 @@ $(function(){
           
         
  			
-            <a id="fancybox-manual-a" href="javascript:;"  onclick="ga('send','event','Self Esteem & Confidence','Self Esteem & Confidence')"><img id="click1" src="images/asset5.png" class="animated infinite bounce"></a>
-       		
+       
+            	
             
             <div id="parallax-bg1" data-stellar-ratio="1">
 			<img src="images/planet1.png" alt="planet"/>
@@ -325,13 +333,21 @@ $(function(){
     		
          
 
-     
+<div id="carousel1">
+                <ul>
+		<li><img alt="" src="images/slide1.png" width="550" height="300" /></li>
+		<li><img alt="" src="images/slide5.png" width="550" height="300" /></li>
+ 		<li><img alt="" src="images/slide6.png" width="550" height="300" /></li>
+		<li><img alt="" src="images/slide7.png" width="550" height="300" /></li>
+        <li><img alt="" src="images/slide11.png" width="550" height="300" /></li>
+	</ul>
+</div>
 
-       
+    <a id="fancybox-manual-a" href="javascript:;"  onclick="ga('send','event','Self Esteem & Confidence','Self Esteem & Confidence')"><img id="click1" src="images/asset5.png" class="animated infinite bounce"></a>   
        
        
      	
-</div>   
+</div>  
 </div>
 </div>
 </div>
@@ -513,8 +529,8 @@ $(function(){
 		</div>
    
         <a id="fancybox-manual-c" href="javascript:;"  onclick="ga('send','event','Depression','Depression')">  
-        <img id="click3" src="images/asset7.png" data-bottom-top="opacity: 0; transform: translateX(200px);"
-    data-center-bottom="opacity: 1; transform: translateX(0px);" /></a> 
+        <img id="click3" src="images/asset7.png" data-bottom-top="opacity: 1; transform: translateX(200px);"
+    data-center-bottom="opacity: 1; transform: translateX(-210px);" /></a> 
         
        	  
            
@@ -530,20 +546,15 @@ $(function(){
 	   <img src="images/shark1.png" alt="shark"/>
 	   </div>
        
-       	<div id="carousel">
+       	<div id="carousel2">
 	<ul>
-		<li><img alt="" src="images/slide1.png" width="550" height="300" /></li>
-		<li><img alt="" src="images/slide2.png" width="550" height="300" /></li>
-		<li><img alt="" src="images/slide3.png" width="550" height="300" /></li>
+		
+	
+
         <li><img alt="" src="images/slide4.png" width="550" height="300" /></li>
-        <li><img alt="" src="images/slide5.png" width="550" height="300" /></li>
-        <li><img alt="" src="images/slide6.png" width="550" height="300" /></li>
-        <li><img alt="" src="images/slide7.png" width="550" height="300" /></li>
-        <li><img alt="" src="images/slide8.png" width="550" height="300" /></li>
-        <li><img alt="" src="images/slide9.png" width="550" height="300" /></li>
-        <li><img alt="" src="images/slide10.png" width="550" height="300" /></li>
-        <li><img alt="" src="images/slide11.png" width="550" height="300" /></li>
-        <li><img alt="" src="images/slide12.png" width="550" height="300" /></li>
+		<li><img alt="" src="images/slide8.png" width="550" height="300" /></li>
+ 		<li><img alt="" src="images/slide10.png" width="550" height="300" /></li>
+		<li><img alt="" src="images/slide12.png" width="550" height="300" /></li>
 	</ul>
 </div>
        
@@ -556,15 +567,22 @@ $(function(){
             
 <div class="section s5" id="page5" data-stellar-background-ratio="0.5">
 <div id="e" class="box" data-vp-name="/pannel-e">
-		
+
+<a id="fancybox-manual-d" href="javascript:;"  onclick="ga('send', 'event', 'button', 'click', 'Section 5')">  
+<img id="click4" src="images/asset8.png" class="animated infinite bounce"/></a>	
         
 <div id="shark2" data-2500="left: 560px;" data-3000="left: 150px;"/>
 <img src="images/shark2.png" alt="shark"/>
 </div>
+	
         
-       
-			
-       
+   <div id="youtube_zone">
+	
+		<object width="315" height="100" onclick="ga(‘send’, ‘event’,’video’, ‘Anti-bulling Video’,’Anti-bulling Video’)"><param name="movie" value="http://www.youtube.com/v/o7nxbULcaH4"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/o7nxbULcaH4" type="application/x-shockwave-flash" wmode="transparent" width="420" height="250" onclick="ga(‘send’, ‘event’,’video’, ‘Anti-bulling Video’,’Anti-bulling Video’)"></embed></object>
+		
+	</div>
+		
+     
 <img id="bannerleft" src="images/banner2.png" alt="BullyingBanner" />
             
 <div id="parallax-cloudbg2" data-stellar-ratio="1">
@@ -575,8 +593,7 @@ $(function(){
 		<img src="images/octo1.png" alt="octo1"/>
 		</div>        
          
-<a id="fancybox-manual-d" href="javascript:;"  onclick="ga('send', 'event', 'button', 'click', 'Section 5')">  
-<img id="click4" src="images/asset8.png" class="animated infinite bounce"/></a>	
+
     
 </div>
 </div>
@@ -624,7 +641,7 @@ $(function(){
 
  
 $("#fancybox-manual-a").click(function() {
-				$.fancybox.open('images/asset3.png');
+				$.fancybox.open('images/self-esteem.png');
 			});
 			
 $("#fancybox-manual-b").click(function() {
@@ -632,7 +649,7 @@ $("#fancybox-manual-b").click(function() {
 			});
 			
 $("#fancybox-manual-c").click(function() {
-				$.fancybox.open('images/asset4.png');
+				$.fancybox.open('images/depression.png');
 			});
 			
 $("#fancybox-manual-d").click(function() {
@@ -644,6 +661,9 @@ $("#fancybox-manual-e").click(function() {
 			});
 $("#fancybox-manual-f").click(function() {
 				$.fancybox.open('images/badmentalhealth.png');
+			});
+$("#fancybox-manual-g").click(function() {
+				$.fancybox.open('images/ineedhelp.png');
 			});
 
 
