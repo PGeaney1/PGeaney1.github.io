@@ -1,15 +1,19 @@
 <!doctype html>
 
-<html>
-
-	<head>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
 		<title>Mental Health Responsive Website</title>
 		<meta charset="utf-8" />
 		
         <!DOCTYPE HTML>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     
 	
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
@@ -26,6 +30,7 @@
      <script src="js/iscroll.js"></script>
      <script src="js/jquery.scrollme.js"></script>
      <script src="js/jquery.waypoints.js"></script>
+     <script src="js/jquery.fitvids.js"></script>
     
  
      
@@ -110,12 +115,13 @@ $(function(){
         <nav id="nav-main">
            <ul class="navigation">
                
-                <li data-slide="1"><a class="smoothScroll" href="#page1">Self Esteem</a></li>
+       
+                <li data-slide="1"><a class="smoothScroll" href="#page1">Self-Esteem</a></li>
                 <li data-slide="2"><a class="smoothScroll" href="#page2">Mental Health</a></li>
                  <li data-slide="3"><a class="smoothScroll" href="#page3">Lets Begin</a></li>
                <li data-slide="4"><a class="smoothScroll" href="#page4">Depression</a></li>
                 <li data-slide="5"><a class="smoothScroll" href="#page5">Bullying</a></li>
-                 <li data-slide="5"><a class="smoothScroll" a id="fancybox-manual-g" href="javascript:;"  onclick="ga('send','event','I need help','I need help')">I need help</a></li>
+                 <li data-slide="6"><a class="smoothScroll" href="javascript:;" a id="fancybox-manual-g"   onclick="ga('send','event','I need help','I need help')">I need help</a></li>
             </ul>
         </nav>
         <nav id="nav-mobile"></nav>
@@ -137,6 +143,7 @@ $(function(){
                     <li>
 			<a class="smoothScroll" href="#page5">Bullying</a>
 					</li>
+                    
 				</ul>
 			</nav>
     </header>
@@ -577,12 +584,13 @@ $(function(){
 </div>
 	
         
-   <div id="youtube_zone">
-	
-		<object width="315" height="100" onclick="ga(‘send’, ‘event’,’video’, ‘Anti-bulling Video’,’Anti-bulling Video’)"><param name="movie" value="http://www.youtube.com/v/o7nxbULcaH4"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/o7nxbULcaH4" type="application/x-shockwave-flash" wmode="transparent" width="420" height="250" onclick="ga(‘send’, ‘event’,’video’, ‘Anti-bulling Video’,’Anti-bulling Video’)"></embed></object>
-		
-	</div>
-		
+<div class="youtube_zone">
+<object width="315" height="100" scale="tofit" onclick="ga(‘send’, ‘event’,’video’, ‘Anti-bulling Video’,’Anti-bulling Video’)"><param name="movie" value="http://www.youtube.com/v/o7nxbULcaH4"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/o7nxbULcaH4" type="application/x-shockwave-flash" wmode="transparent" width="420" height="250" scale="tofit" onclick="ga(‘send’, ‘event’,’video’, ‘Anti-bulling Video’,’Anti-bulling Video’)"></embed></object>
+</div>
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o7nxbULcaH4" frameborder="0" allowfullscreen></iframe>
+</div>		
      
 <img id="bannerleft" src="images/banner2.png" alt="BullyingBanner" />
             
@@ -669,6 +677,7 @@ $("#fancybox-manual-g").click(function() {
 
 
 </script>
+ 
 
 </body>
 </html>

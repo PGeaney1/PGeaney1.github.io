@@ -1,0 +1,344 @@
+@charset "utf-8";
+/* CSS Document */
+.article,menu, nav, section { 
+    	display: block;
+}
+
+.s1 {
+	background-image:none;
+	background-colour:#063;
+	position: relative;
+
+
+	
+	
+}
+
+#spaceBg{
+	background-image: url(../images/mobileSpace.png);
+	
+	
+}
+
+.s2 {
+	background-image:none;
+	position:relative;
+	color:#fff;	
+	height:800px;
+	position: relative;
+}
+
+#sky2Bg{
+	background-image: url(../images/mobilebg.png);
+	
+}
+
+.s3 {
+	background-image:none;
+	position:relative;
+	color:#fff;	
+	height:800px;
+}
+
+.s4 {
+	background-image:none;
+	position:relative;
+	color:#fff;	
+	height:800px;
+}
+
+#underwaterBg{
+	background-image: url(../images/mobileunderwaterbg.png);
+}
+
+#waterBg {
+	display:none;
+}
+
+#mainBg {
+	
+	display:none;
+}
+
+#primary{
+	display:none;
+}
+
+.aside {
+    width: 50px;  
+    display: block;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%); /* Safari and Chrome */
+	-moz-transform: translate(-50%, -50%); /* Firefox */
+	-ms-transform: translate(-50%, -50%); /* IE 9 */
+ 	-o-transform: translate(-50%, -50%); /* Opera */
+	overflow:hidden;
+	-webkit-transform: translateZ(0);
+	z-index:8;
+	position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 15px;
+	overflow-y: hidden;
+	overflow: hidden;
+}
+
+#parallax-bg1{
+	position: absolute;
+	top: 200px;
+	left: -50px;
+	z-index: 1;
+	width:100%;
+}
+
+#parallax-bg2{
+	position: absolute;
+	top: 450px;
+	left: -10px;
+	z-index: 2;
+	width:100%;
+	height:100%;
+}
+#bannerleft{
+	width:70%;
+	text-align:center;
+	display:block;
+}
+
+#bannerleft2{
+	width:70%;
+	text-align:center;
+	display:block;
+}
+
+#parallax-fg1{
+	position: absolute;
+	top: 50;
+	left: 10px;
+	z-index: 3;
+	width:100%;
+	height:100%;
+}
+
+#parallax-fg2{
+	position: absolute;
+	top: 350;
+	left: 20px;
+	z-index: 7;
+	width:100%;
+	height:100%;
+}
+
+#parallax-fg3{
+	position: absolute;
+	top: 750;
+	left: 20px;
+	z-index: 7;
+	width:100%;
+	height:100%;
+}
+
+#parallax-cloudbg1{
+	position: absolute;
+	top: 550px;
+	left: 0px;
+	z-index: 1;
+	width:100%;
+	height:100%;
+}
+
+#parallax-cloudbg2{
+	position: absolute;
+	top: 52px;
+	left: 0px;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+#parallax-cloudbg3{
+	position: absolute;
+	top: 700px;
+	left: 350px;
+	z-index: 2;
+	width:100%;
+	height:100%;
+}
+
+#ufo1 {
+  position: absolute;
+  width: 50%;
+  top:10;
+  margin:30px;
+}
+
+#ufo2 {
+  position: absolute;
+  width: 50%;
+  top:10;
+}
+
+#van{
+    position: absolute;
+    right: 20;
+    bottom: -10px;
+    z-index:1;
+	width:50%;
+}
+
+#boat{
+    position: absolute;
+    right: 10;
+    bottom: 0;
+    z-index:3;
+	width:50%;
+}
+
+
+#plane {
+  position: fixed;
+  width: 50%;
+  top:10;
+}
+
+#helicopter {
+ position:absolute;
+  width: 50%;
+  top:0;
+}
+
+#bus{
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}
+
+#shark1{
+    position: absolute;
+  	right: 0;
+    top: 0;
+    z-index:1;
+	width:50%;
+}
+
+#shark2{
+    position: absolute;
+  	right: 0;
+    top: 0;
+    z-index:2;
+	width:50%;
+}
+
+#click1{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:4;
+	width:90%;
+}
+
+#click2{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:4;
+	width:90%;
+}
+
+#click3{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:4;
+	width:70%;
+}
+
+#click4{
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:8;
+	width:70%;
+}
+
+
+
+
+
+
+/*-- iPad 1Gen/2Gen iPad Mini, Kindle Fire --*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+
+#van{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}
+	
+#bus{
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}	
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+#van{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}
+	
+#bus{
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}	
+
+}
+
+	
+}
+/*-- Kindle Fire HD 8.9"--*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-device-width:1920px) {
+	
+	#van{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}
+	
+#bus{
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    z-index:2;
+	width:50%;
+}	
+
+}
+	
+	
+	
+	
+	
