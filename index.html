@@ -121,7 +121,8 @@ $(function(){
                  <li data-slide="3"><a class="smoothScroll" href="#page3">Lets Begin</a></li>
                <li data-slide="4"><a class="smoothScroll" href="#page4">Depression</a></li>
                 <li data-slide="5"><a class="smoothScroll" href="#page5">Bullying</a></li>
-                 <li data-slide="6"><a class="smoothScroll" href="javascript:;" a id="fancybox-manual-g"   onclick="ga('send','event','I need help','I need help')">I need help</a></li>
+                <li data-slide="6"><a class="smoothScroll" href="#page6">I need help</a></li>
+                   
             </ul>
         </nav>
         <nav id="nav-mobile"></nav>
@@ -142,6 +143,9 @@ $(function(){
 					</li>
                     <li>
 			<a class="smoothScroll" href="#page5">Bullying</a>
+					</li>
+              <li>
+			<a class="smoothScroll" href="#page6">I need help</a>
 					</li>
                     
 				</ul>
@@ -307,7 +311,7 @@ $(function(){
 <div class="col-1-1">
 <div class="stickem-container" id="sticky1">
 <div id="page1" class="section s1" data-stellar-background-ratio="0.5">
-<div id="a" class="box" data-vp-name="/pannel-a">	
+<div id="a" class="box" data-vp-name="Section 1 Self Esteem">	
 	
 <div id="sticky"><p id="stickynote"></p></div>	
         
@@ -376,7 +380,7 @@ $(function(){
 <div class="col-1-1">
 <div class="stickem-container" id="sticky2">
 <div class="section s2" id="page2" data-stellar-background-ratio="0.5">
-<div id="b" class="box" data-vp-name="/pannel-b">
+<div id="b" class="box" data-vp-name="Section 2 Mental Health">
 
           
           
@@ -460,7 +464,7 @@ $(function(){
 <!--section 3-->              
             
 <div class="section s3" id="page3" data-stellar-background-ratio="0.5">
-<div id="c" class="box" data-vp-name="/pannel-c">
+<div id="c" class="box" data-vp-name="Section 3 Home Page">
 		
         
         
@@ -515,7 +519,7 @@ $(function(){
 <div class="grid grid-pad">
 <div class="col-1-1">
 <div class="stickem-container" id="sticky3" data-stellar-background-ratio="0.5">
-<div id="d" class="box" data-vp-name="/pannel-d">
+<div id="d" class="box" data-vp-name="Section 4 Depression">
 
 <div class="section s4" id="page4" data-stellar-background-ratio="0.5">
             
@@ -574,9 +578,9 @@ $(function(){
 <!--section 5-->            
             
 <div class="section s5" id="page5" data-stellar-background-ratio="0.5">
-<div id="e" class="box" data-vp-name="/pannel-e">
+<div id="e" class="box" data-vp-name="Section 5 Bullying">
 
-<a id="fancybox-manual-d" href="javascript:;"  onclick="ga('send', 'event', 'button', 'click', 'Section 5')">  
+<a id="fancybox-manual-d" href="javascript:;"  onclick="ga('send', 'event', 'Anti-Bullying', 'Anti-Bullying', 'Section 5')">  
 <img id="click4" src="images/asset8.png" class="animated infinite bounce"/></a>	
         
 <div id="shark2" data-2500="left: 560px;" data-3000="left: 150px;"/>
@@ -613,7 +617,33 @@ $(function(){
 
 
 
+<div id="page6" class="section s6" data-stellar-background-ratio="0.5">
+<div id="f" class="box" data-vp-name="Section 6 Help page">
 
+<a id="fancybox-manual-g" href="javascript:;"  onclick="ga('send', 'event', 'I need help', 'I need help', 'Section 5')">  
+<img id="helpicon" src="images/helpicon.png" class="animated infinite pulse"/></a>	
+
+
+<div id="parallax-cloudbg2" data-stellar-ratio="1">
+<img src="images/octo3.png" alt="octo1"/>
+</div>
+            
+<div id="parallax-cloudbg1" data-stellar-ratio="1">
+		<img src="images/octo1.png" alt="octo1"/>
+		</div>        
+
+<div id="parallax-cloudbg2" data-stellar-ratio="1">
+		<img src="images/octo3.png" alt="octo1"/>
+		</div>
+            
+       
+        
+       <div id="shark1" data-1500="left: 0px;" data-2500="left: 760px;"/>
+	   <img src="images/shark1.png" alt="shark"/>
+	   </div>
+
+
+</div>
 
 
 
@@ -644,6 +674,12 @@ $(function(){
              <script type="text/javascript" src="js/jquery.infinitecarousel.js"></script>
             
           <!--<script src="http://debug.edgeinspect.adobe.com/target/target-script-min.js#lukyanov"></script>-->
+ <script type="text/javascript">
+    $('a#openHelp').click(function() {
+				$.fancybox.open('images/ineedhelp.png');
+			});
+
+</script>
  
 <script type="text/javascript">  
 
