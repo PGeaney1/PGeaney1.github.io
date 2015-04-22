@@ -126,4 +126,86 @@ $(function skrollrInit() {
 
 });
 
+// This code loads the IFrame Player API code asynchronously
+var tag = document.createElement('script');
+tag.src = "http://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// This code is called by the YouTube API to create the player object
+function onYouTubeIframeAPIReady(event) {
+  player = new YT.Player('youTubePlayer', {
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+var pauseFlag = false;
+function onPlayerReady(event) {
+   // do nothing, no tracking needed
+}
+function onPlayerStateChange(event) {
+    // track when user clicks to Play
+    if (event.data == YT.PlayerState.PLAYING) {
+        _gaq.push(['_trackEvent', 'Videos', 'Play', 'Antibully Video']);
+        pauseFlag = true;
+    }
+    // track when user clicks to Pause
+    if (event.data == YT.PlayerState.PAUSED && pauseFlag) {
+        _gaq.push(['_trackEvent', 'Videos', 'Pause', 'Antibully Video']);
+        pauseFlag = false;
+    }
+    // track when video ends
+    if (event.data == YT.PlayerState.ENDED) {
+        _gaq.push(['_trackEvent', 'Videos', 'Finished', 'Antibully Video']);
+    }
+}
+
+
+$('a#openHelp').click(function() {
+				$.fancybox.open('images/ineedhelp.png');
+			});
+
+$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('images/self-esteem.png');
+			});
+			
+$("#fancybox-manual-b").click(function() {
+				$.fancybox.open('images/asset4.png');
+			});
+			
+$("#fancybox-manual-c").click(function() {
+				$.fancybox.open('images/depression.png');
+			});
+			
+$("#fancybox-manual-d").click(function() {
+				$.fancybox.open('images/bulling.png');
+			});
+			
+$("#fancybox-manual-e").click(function() {
+				$.fancybox.open('images/goodmentalhealth.png');
+			});
+$("#fancybox-manual-f").click(function() {
+				$.fancybox.open('images/badmentalhealth.png');
+			});
+$("#fancybox-manual-g").click(function() {
+				$.fancybox.open('images/ineedhelp.png');
+			});
+
+
+$(function(){
+	$('#carousel1').infiniteCarousel({
+		displayTime: 5000,
+		
+	});
+});
+
+$(function(){
+	$('#carousel2').infiniteCarousel({
+		displayTime: 5000,
+		
+	});
+});
 
