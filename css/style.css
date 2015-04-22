@@ -123,10 +123,6 @@ body {
 	background-color: #214d58;
 	font-family: 'Asap', serif;
 	font-size: 15px;
-	background-image: url(../images/thebackground.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 a:link {
 	color: #f68f67;
@@ -648,6 +644,13 @@ a img {
 	width: 20%;
 }
  @media all and (max-width: 700px) {
+
+body {
+	background-image: url(../images/thebackground.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 .article, menu, nav, section {
 	display: block;
 }
@@ -657,7 +660,7 @@ a img {
 	position: relative;
 }
 #spaceBg {
-	background-image: url(../images/mobileSpace.png);
+	background-image: url(../images/mobileSpace.jpg);
 }
 .s2 {
 	background-image: none;
@@ -667,7 +670,7 @@ a img {
 	position: relative;
 }
 #sky2Bg {
-	background-image: url(../images/mobilebg.png);
+	background-image: url(../images/mobilebg.jpg);
 }
 .s3 {
 	background-image: none;
