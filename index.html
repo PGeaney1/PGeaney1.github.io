@@ -129,9 +129,22 @@ jQuery(window).load(function() {
     var waittoVPV = 2; // time to wait to fire a virtual pageview in seconds
   
     // Google Analytics stuff goes here
-    function analyticsStuff(){
+    function analyticsStuff(currentId){
 		
 	 $("#stickynote").html('Sent an event: ' + $('#' + currentId).attr('data-vp-name')); 
+	 
+	 ga('send', {
+  'hitType': 'event',          // Required.
+  'eventCategory': 'scrolling_new',   // Required.
+  'eventAction': 'stopped',      // Required.
+  'eventLabel': $('#' + currentId).attr('data-vp-name'),
+  'eventValue': 1
+});
+	 
+	 
+	 
+	 
+	 
 	 
 	 ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name') ); // Tracking Virtual pageviews with new Universal Analytics
 	 
@@ -359,17 +372,17 @@ jQuery(window).load(function() {
           <img src="images/shark2.png" alt="shark"/> </div>
           
         <div class="youtube_zone">
-          <object width="315" height="100" scale="tofit" onclick="ga('send','event','video','click',’Anti-bulling Video’)">
-            <param name="movie" value="http://www.youtube.com/v/o7nxbULcaH4">
+          <object width="315" height="100" scale="tofit">
+            <param name="movie" value="http://www.youtube.com/v/o7nxbULcaH4" onClick=”_gaq.push([‘_trackEvent’, ‘videos’, ‘play’, ‘video marketing is awesome1’,]);”>
             </param>
             <param name="wmode" value="transparent">
             </param>
-            <embed src="http://www.youtube.com/v/o7nxbULcaH4" type="application/x-shockwave-flash" wmode="transparent" width="420" height="250" scale="tofit"onclick="ga('send','event','video','click',’Anti-bulling Video’)"></embed>
+            <embed src="http://www.youtube.com/v/o7nxbULcaH4" type="application/x-shockwave-flash" wmode="transparent" width="420" height="250" scale="tofit"></embed>
           </object>
         </div>
         
         <div class="video-container">
-          <iframe id="youTubePlayer" width="560" height="315" src="https://www.youtube.com/embed/o7nxbULcaH4? enablejsapi=1&origin=https://megalytic.com" frameborder="0" allowfullscreen></iframe>
+          <iframe id="youTubePlayer" width="560" height="315" src="https://www.youtube.com/embed/o7nxbULcaH4? enablejsapi=1&origin=https://megalytic.com" frameborder="0" allowfullscreen onClick=”_gaq.push([‘_trackEvent’, ‘videos’, ‘play’, ‘video marketing is awesome2’,]);”></iframe>
         </div>
         
         <img id="bannerleft" src="images/banner2.png" alt="BullyingBanner" />

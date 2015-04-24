@@ -646,7 +646,9 @@ a img {
  @media all and (max-width: 700px) {
 
 body {
-	background-color: #214d58;
+	background-image: url(../images/thebackground.png);
+	background-repeat: no-repeat;
+	background-position: center;
 	
 }
 .article, menu, nav, section {
