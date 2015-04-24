@@ -646,10 +646,8 @@ a img {
  @media all and (max-width: 700px) {
 
 body {
-	background-image: url(../images/thebackground.png);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #214d58;
+	
 }
 .article, menu, nav, section {
 	display: block;
@@ -703,7 +701,6 @@ body {
 	display: none;
 }
 .aside {
-	position:relative;
 	width: 50px;
 	display: block;
 	transform: translate(-50%, -50%);
@@ -713,7 +710,7 @@ body {
 	-o-transform: translate(-50%, -50%); /* Opera */
 	overflow: hidden;
 	-webkit-transform: translateZ(0);
-	z-index: 10;
+	z-index: 8;
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
