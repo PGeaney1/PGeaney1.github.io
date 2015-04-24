@@ -646,7 +646,7 @@ a img {
  @media all and (max-width: 700px) {
 
 body {
-	background-image: url(../images/thebackground.jpg);
+	background-image: url(../images/thebackground.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -703,6 +703,7 @@ body {
 	display: none;
 }
 .aside {
+	position:relative;
 	width: 50px;
 	display: block;
 	transform: translate(-50%, -50%);
@@ -712,7 +713,7 @@ body {
 	-o-transform: translate(-50%, -50%); /* Opera */
 	overflow: hidden;
 	-webkit-transform: translateZ(0);
-	z-index: 8;
+	z-index: 10;
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
@@ -883,7 +884,6 @@ body {
 #helpicon {
 	position: absolute;
 	bottom: 0;
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	z-index: 8;
