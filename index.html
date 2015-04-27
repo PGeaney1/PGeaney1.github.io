@@ -384,17 +384,19 @@
 
 <!--<script src="http://debug.edgeinspect.adobe.com/target/target-script-min.js#lukyanov"></script>-->
 <script type="text/javascript">
-
-$(window).load(function() {
-  $('.carousel1').infiniteCarousel({
-       displayTime: 5000,
-    });
-	
-	 $('.carousel1').infiniteCarousel({
-       displayTime: 5000,
-    });	
+$(function(){
+	$('#carousel1').infiniteCarousel({
+		displayTime: 5000,
+		
+	});
 });
 
+$(function(){
+	$('#carousel2').infiniteCarousel({
+		displayTime: 5000,
+		
+	});
+});
 </script>
 </body>
 </html>

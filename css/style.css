@@ -60,9 +60,9 @@
 	width: auto\9; /* ie8 */
 	overflow: scroll;
 	display: flex;
-	position: relative;
-	width: 50%;
-	z-index: 2;
+	position:absolute;
+	width: 40%;
+	z-index: 3;
 	margin-top: 160px
 }
 #carousel2 ul {
