@@ -61,9 +61,8 @@
 	overflow: scroll;
 	display: flex;
 	position: relative;
-	width: 40%;
-	z-index: 1;
-	float: right;
+	width: 50%;
+	z-index: 2;
 	margin-top: 160px
 }
 #carousel2 ul {
@@ -91,8 +90,8 @@
 	display: flex;
 	position: relative;
 	margin-top: 60px;
-	width: 40%;
-	z-index: 1;
+	width: 45%;
+	z-index: 2;
 	float: right;
 }
 #carousel1 ul {
