@@ -53,7 +53,7 @@
 			
 				// Pause/play button(img)	
 				html = '<a href="javascript:void(0);"></></a>';
-				html += '<a href="javascript:void(0);"><img id="play_btn'+randID+'" src="/js/infiniteCarousel/images/play.png" style="position:absolute;top:3px;right:3px;border:none;display:none;" alt="Play" /></a>';
+				html += '<a href="javascript:void(0);"><img id="play_btn'+randID+'" style="position:absolute;top:3px;right:3px;border:none;display:none;" alt="Play" /></a>';
 				$(obj).append(html);
 				$('#pause_btn'+randID).css('opacity','.5').hover(function(){$(this).animate({opacity:'1'},250)},function(){$(this).animate({opacity:'.5'},250)});
 				$('#pause_btn'+randID).click(function(){

@@ -1,6 +1,6 @@
 /* Global */
-
-
+  
+  
 .youtube_zone {
 	width: 550px;
 	height: 300px;
@@ -644,12 +644,8 @@ a img {
 	width: 20%;
 }
  @media all and (max-width: 700px) {
-
 body {
-	background-image: url(../images/thebackground.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	
+	background-color: #214d58;
 }
 .article, menu, nav, section {
 	display: block;
@@ -984,9 +980,9 @@ body {
 	height: 100%;
 }
 }
-
-/*-- iPad 1Gen/2Gen iPad Mini, Kindle Fire --*/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  
+  /*-- iPad 1Gen/2Gen iPad Mini, Kindle Fire --*/
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 #van {
 	position: absolute;
 	right: 0;
@@ -1018,8 +1014,8 @@ body {
 }
 }
 }
-/*-- Kindle Fire HD 8.9"--*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-device-width:1920px) {
+  /*-- Kindle Fire HD 8.9"--*/
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-device-width:1920px) {
 #van {
 	position: absolute;
 	right: 0;
