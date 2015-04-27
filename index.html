@@ -78,7 +78,7 @@ jQuery(window).load(function() {
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-62298745-1', 'auto');
- 
+  
 
 </script>
 
@@ -106,59 +106,56 @@ jQuery(window).load(function() {
     </ul>
   </nav>
 </header>
-<script type="text/javascript">
-  
+ <script type="text/javascript">
+    /*
+    Code by Ani Lopez & Alejandro Scott
+    You are free to reuse and tweak it as you please
+    Opinions, questions? Drop us a line: info@dynamical.biz
+    */
   	
     // Parameters to Configure
     var panelClass = '.box'; // class identifier for the panels to track
     var marginTop = 70; // distance above window top border
     var marginBottom = 170;  // distance below window top border
     var waittoVPV = 2; // time to wait to fire a virtual pageview in seconds
-	
   
-    // Google Analytics stuff goes here
+    // Your Google Analytics stuff goes here
     function analyticsStuff(){
-	
-	var theDivId = $('#' + currentId).attr('data-vpn-name');	
-	
+		
+	 $("#stickynote").html('Sent an event: ' + $('#' + currentId).attr('data-vp-name')); 
 	 
-	 ga('send', {
-  'hitType': 'event',          // Required.
-  'eventCategory': 'scrolling_new',   // Required.
-  'eventAction': 'stopped',      // Required.
-  'eventLabel': (theDivId),
-  'eventValue': 1
+	ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name'));
+	
+	ga('send', 'pageview', {
+  'page': $('#' + currentId).attr('data-vpn-name'),
+  'title': 'scroll Section1'
 });
 	 
-	  ga('send', {
+	ga('send', 'event', 'button1', 'scroll2', $('#' + currentId).attr('data-vpn-name'));
+	
+	ga('send', {
   'hitType': 'event',          // Required.
-  'eventCategory': 'scrolling_new2',   // Required.
-  'eventAction': 'stopped2',      // Required.
-  'eventLabel': $('#' + currentId).attr('data-vpn-name'),
-  'eventValue': 1
+  'eventCategory': 'button2',   // Required.
+  'eventAction': 'click',      // Required.
+  'eventLabel': 'Sent an event: ' + $('#' + currentId).attr('data-vp-name') 
+  
+   // ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with new Universal Analytics
+ 
 });
-	 
-	 
-	 ga('send', 'pageview', (theDivId));
-	 
-	ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with new Universal Analytics
-	 
-	 
-	 //_gaq.push(['_trackEvent', 'scroll_2', 'scrolling_2', $('#' + currentId).attr('data-vpn-name')]);
-	 
-	 
-	 ga('send', 'event', 'scroll', 'scrolling', {'page': + theDivId });
-	 
-	 ga('send', 'event', 'scroll_3', 'scrolling_3', $('#' + currentId).attr('data-vpn-name'));
-	 
-	 
-	 // $("#stickynote").html('Sent an event: ' + $('#' + currentId).attr('data-vp-name')); 
-	 // ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with new Universal Analytics
-      // _gaq.push(['_trackPageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with old Google Analytics
+	
+	
+	
+
+	
+	
+	// Tracking Virtual pageviews with new Universal Analytics
+    //_gaq.push(['_trackPageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with old Google Analytics
+	
+	
 	
     }
   
-      // No need to change anything below here --------------------------------------------------------------------------------
+    // No need to change anything below here --------------------------------------------------------------------------------
     var counter = 0;
     var timer = null;
     var panneltops = new Object;
@@ -169,6 +166,8 @@ jQuery(window).load(function() {
     // Watch + fire Virtual Pageviews
     function tictac(){
       counter++;
+      console.log('Secs: ' + counter);
+      $("#stickynote").html('Timer in seconds: ' + counter); // remove this
       if(counter == waittoVPV && currentId != lastId) {
         resetInterval();
         lastId = currentId;
@@ -257,6 +256,7 @@ jQuery(window).load(function() {
         <div class="stickem-container" id="sticky1">
           <div id="page1" class="section s1" data-stellar-background-ratio="0.5">
             <div id="Self-Esteem" class="box" data-vp-name="/Section 1 Self Esteem">
+            <div id="sticky"><p id="stickynote"></p></div>	
               
               <div id="ufo1"> <img src="images/UFO1.png" alt="UFO1"/> </div>
               <div id="ufo2"> <img src="images/UFO2.png" alt="UFO2"/> </div>
