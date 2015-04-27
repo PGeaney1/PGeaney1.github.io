@@ -152,17 +152,3 @@ $("#fancybox-manual-g").click(function() {
 			});
 
 
-$(function(){
-	$('#carousel1').infiniteCarousel({
-		displayTime: 5000,
-		
-	});
-});
-
-$(function(){
-	$('#carousel2').infiniteCarousel({
-		displayTime: 5000,
-		
-	});
-});
-
