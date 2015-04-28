@@ -58,14 +58,12 @@
 	max-width: 100%;
 	height: auto;
 	width: auto\9; /* ie8 */
-	overflow: visible;
-	display: block;
-	position: relative;
+	overflow: scroll;
+	display: flex;
+	position:absolute;
 	width: 40%;
 	z-index: 3;
-	margin-top: 190px
-	image gap:0;
-	height:300px;
+	margin-top: 160px
 }
 #carousel2 ul {
 	list-style: none;
@@ -86,16 +84,15 @@
 #carousel1 {
 	margin: 0 auto;
 	max-width: 100%;
+	height: auto;
 	width: auto\9; /* ie8 */
-	overflow: visible;
-	display: block;
+	overflow: scroll;
+	display: flex;
 	position: relative;
 	margin-top: 60px;
-	width: 40%;
+	width: 45%;
 	z-index: 2;
 	float: right;
-	image gap:0;
-	height:300px;
 }
 #carousel1 ul {
 	list-style: none;
@@ -992,7 +989,6 @@ body {
 	z-index: 2;
 	width: 50%;
 }
-
 #bus {
 	position: absolute;
 	left: 70px;

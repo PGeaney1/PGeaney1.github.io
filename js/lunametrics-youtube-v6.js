@@ -1,5 +1,3 @@
-//
-//To Track Thy Youtube Upon Google Analytics
 
 var tag = document.createElement('script');
 tag.src = "//www.youtube.com/iframe_api";
