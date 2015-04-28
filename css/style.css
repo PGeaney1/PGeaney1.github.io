@@ -59,11 +59,13 @@
 	height: auto;
 	width: auto\9; /* ie8 */
 	overflow: scroll;
-	display: flex;
-	position:absolute;
+	display: block;
+	position: relative;
 	width: 40%;
 	z-index: 3;
-	margin-top: 160px
+	margin-top: 180px
+	image gap:0;
+	height:300px;
 }
 #carousel2 ul {
 	list-style: none;
@@ -84,15 +86,16 @@
 #carousel1 {
 	margin: 0 auto;
 	max-width: 100%;
-	height: auto;
 	width: auto\9; /* ie8 */
 	overflow: scroll;
-	display: flex;
+	display: block;
 	position: relative;
 	margin-top: 60px;
 	width: 45%;
 	z-index: 2;
 	float: right;
+	image gap:0;
+	height:300px;
 }
 #carousel1 ul {
 	list-style: none;
