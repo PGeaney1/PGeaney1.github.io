@@ -25,8 +25,8 @@
 <script src="js/jquery.scrollme.js"></script>
 <script src="js/jquery.waypoints.js"></script>
 <script src="js/jquery.fitvids.js"></script>
-<script type="text/javascript" "https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script> 
-<script type="text/javascript" src="js/lunametrics-youtube-v6.js"></script> 
+<script type="text/javascript" "https://www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
+<script type="text/javascript" src="js/ga-youtube-event-tracking.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,8 +35,6 @@
 
   ga('create', 'UA-62298745-1', 'auto');
 </script>
-
-
 <script type="text/javascript">
       $(document).ready(function(){
           $("#nav-mobile").html($("#nav-main").html());
@@ -119,39 +117,25 @@
   
        // Your Google Analytics stuff goes here
     function analyticsStuff(){
-           $("#stickynote").html('Fired virtual pageview: ' + $('#' + currentId).attr('data-vp-name')); // remove this and use the metod below that applies to your GA tracking
-        // ga('send', 'pageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with new Universal Analytics
-        
-		
-		var targetHref =  $('#' + currentId).attr('data-vp-name');
+          
+        var targetHref =  $('#' + currentId).attr('data-vp-name');
 		//alert(targetHref);
 
 		ga('send', 'pageview', targetHref);
 		
-         ga('send', {
+        ga('send', {
     'hitType': 'event',          // Required.
-    'eventCategory': 'scrolling_new',   // Required.
+    'eventCategory': 'Page scrolling',   // Required.
     'eventAction': 'stopped',      // Required.
     'eventLabel': targetHref,
 	'eventValue': 1
   });
-         ga('send', {
-    'hitType': 'event',          // Required.
-    'eventCategory': 'scrolling_new2',   // Required.
-    'eventAction': 'stopped',      // Required.2
-    'eventLabel': '{{targetHref}}',
-	'eventValue': 1
-  });
+      
+         
+         
+         
          
 
-         
-         
-   //       
-         
-         
-         
-         
-        // _gaq.push(['_trackPageview', $('#' + currentId).attr('data-vpn-name')); // Tracking Virtual pageviews with old Google Analytics
       }
   // No need to change anything below here --------------------------------------------------------------------------------
       var counter = 0;
@@ -254,9 +238,7 @@
         <div class="stickem-container" id="sticky1">
           <div id="page1" class="section s1" data-stellar-background-ratio="0.5">
             <div id="a" class="box" data-vp-name="/section 1 Self Esteem">
-              <div id="sticky">
-                <p id="stickynote"></p>
-              </div>
+             
               <div id="ufo1"> <img src="images/UFO1.png" alt="UFO1"/> </div>
               <div id="ufo2"> <img src="images/UFO2.png" alt="UFO2"/> </div>
               <div class="aside stickem"> <img src="images/spaceship.png"/> </div>
@@ -354,7 +336,7 @@
             <img src="images/shark2.png" alt="shark"/> </div>
           <div class="youtube_zone">
             <object width="315" height="100" scale="tofit">
-              <param name="movie" value="http://www.youtube.com/v/o7nxbULcaH4">
+              <param name="video" value="http://www.youtube.com/v/o7nxbULcaH4">
               </param>
               <param name="wmode" value="transparent">
               </param>
@@ -395,7 +377,7 @@
 <script type="text/javascript" src="js/jquery.fancybox.js"></script> 
 <script type="text/javascript" src="js/jquery.infinitecarousel.js"></script> 
 
-<!--<script src="http://debug.edgeinspect.adobe.com/target/target-script-min.js#lukyanov"></script>-->
+<!--<script src="http://debug.edgeinspect.adobe.com/target/target-script-min.js#lukyanov"></script>--> 
 <script type="text/javascript">
 $(function(){
 	$('#carousel1').infiniteCarousel({
