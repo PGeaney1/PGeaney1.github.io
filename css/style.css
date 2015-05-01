@@ -397,7 +397,7 @@ nav#nav-mobile {
 	width: 100%;
 }
 #sticky3 {
-	height: 1500px;
+	height: 1600px;
 	width: 100%;
 	z-index: 2;
 }
@@ -414,6 +414,14 @@ nav#nav-mobile {
 	width: 400px;
 	z-index: 1;
 	float: left;
+}
+#bannerleft3 {
+	position:absolute;
+	margin-top: 60px;
+	width: 400px;
+	z-index: 1;
+	top:0;
+	left:0;
 }
 #homebanner {
 	width: 400px;
@@ -633,6 +641,7 @@ a img {
 #helpicon {
 	position: absolute;
 	bottom: 0;
+	left:0;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
