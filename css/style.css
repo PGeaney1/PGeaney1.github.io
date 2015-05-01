@@ -593,7 +593,7 @@ nav#nav-mobile {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: 4;
+	z-index: 5;
 }
 #click2 {
 	position: absolute;
@@ -704,7 +704,7 @@ body {
 	-o-transform: translate(-50%, -50%); /* Opera */
 	overflow: hidden;
 	-webkit-transform: translateZ(0);
-	z-index: 8;
+	z-index: 4;
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
@@ -848,21 +848,21 @@ body {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: 4;
+	z-index: 6;
 	width: 90%;
 }
 #click2 {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: 4;
+	z-index: 6;
 	width: 90%;
 }
 #click3 {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: 4;
+	z-index: 6;
 	width: 70%;
 }
 #click4 {
