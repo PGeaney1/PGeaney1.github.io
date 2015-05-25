@@ -1,4 +1,15 @@
 /* Global */
+#thecontainer{
+	
+margin-left: 0;
+     margin-right: 0;
+     width: 80%;
+
+
+
+	
+	
+}
 .youtube_zone {
 	width: 550px;
 	height: 300px;
@@ -119,6 +130,8 @@ body {
 	background-color: #214d58;
 	font-family: 'Asap', serif;
 	font-size: 15px;
+	text-align: center;
+
 }
 a:link {
 	color: #f68f67;
