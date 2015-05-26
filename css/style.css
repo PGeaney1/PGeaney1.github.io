@@ -11,7 +11,8 @@ body {
 	width: 650px;
 	height: 300px;
 	margin: 0 auto;
-	padding-left: 89px;
+	padding-left: 0;
+	padding-right: 27px;
 	padding-top: 33px;
 	overflow: hidden;
 	background-image: url(../images/iphone.png);
