@@ -1052,13 +1052,13 @@ a img {
 }
 }
 
-@media all and (max-width: 1200px) {
+@media all and (min-width: 1000px) {
 #wrapper {
 	position:relative;
 	top: 0;
 	bottom: 0;
 	left: 0;
-	max-width: 1500px;
+	max-width: 1400px;
     margin: 0 auto;
 	background-color: #b7dfd4;
 	
