@@ -458,11 +458,11 @@ nav#nav-mobile {
 }
 #parallax-bg2 {
 	position: absolute;
-	top: 339px;
-	left: -212px;
+	top: 388px;
+	left: -467px;
 	z-index: 2;
-	width: 80%;
-	height: 80%;
+	width: 849px;
+	height: 935px;
 }
 #parallax-cloudbg1 {
 	position: absolute;
