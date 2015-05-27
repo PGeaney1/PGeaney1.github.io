@@ -491,7 +491,7 @@ nav#nav-mobile {
 }
 #parallax-fg1 {
 	position: absolute;
-	top: 96px;
+	top: 200px;
 	left: 0;
 	left: -122px;
 	z-index: 3;
@@ -614,7 +614,6 @@ nav#nav-mobile {
 	bottom: 0;
 	left: 6px;
 	z-index: 5;
-	width:50%;
 	
 }
 #click3 {
@@ -622,14 +621,12 @@ nav#nav-mobile {
 	bottom: 0;
 	right: 0;
 	z-index: 5;
-	width:50%;
 }
 #click4 {
 	position: absolute;
 	bottom: 420px;
 	right: 0;
 	z-index: 5;
-	width:50%;
 }
 #teenhead1 {
 	position: absolute;
