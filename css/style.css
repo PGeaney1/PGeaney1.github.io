@@ -1066,9 +1066,9 @@ a img {
 #parallax-fg3 {
 	position: absolute;
 	top: 346px;
-	text-align:center;
-	margin: 0 auto;
-	display:block;
+	display: block;
+    margin-left: auto;
+    margin-right: auto 
 	z-index: 3;
 	width: 100%;
 	height: 100%;
