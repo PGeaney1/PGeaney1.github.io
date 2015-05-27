@@ -520,8 +520,8 @@ nav#nav-mobile {
 	top: 550px;
 	left: -50px;
 	z-index: 0;
-	width: 100%;
-	height: 100%;
+	width: 80%;
+	height: 80%;
 }
 #parallax-fg5 {
 	position: absolute;
@@ -1070,7 +1070,7 @@ a img {
     margin-left: auto;
     margin-right: auto 
 	z-index: 3;
-	width: 100%;
-	height: 100%;
+	width: 80%;
+	height: 80%;
 }
 }
