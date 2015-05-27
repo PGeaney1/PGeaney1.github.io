@@ -452,7 +452,7 @@ nav#nav-mobile {
 #parallax-bg1 {
 	position: absolute;
 	top: 150px;
-	right: -280px;
+	right: 80px;
 	z-index: 1;
 	width: 50%;
 }
@@ -466,8 +466,8 @@ nav#nav-mobile {
 }
 #parallax-cloudbg1 {
 	position: absolute;
-	top: 550px;
-	left: 10px;
+	top: 471px;
+	left: -210px;
 	z-index: 4;
 	opacity: 0.5;
 	width: 100%;
