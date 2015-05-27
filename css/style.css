@@ -466,8 +466,8 @@ nav#nav-mobile {
 }
 #parallax-cloudbg1 {
 	position: absolute;
-	top: 550px;
-	left: 10px;
+	top: 546px;
+	left: -41px;
 	z-index: 4;
 	opacity: 0.5;
 	width: 100%;
@@ -491,9 +491,9 @@ nav#nav-mobile {
 }
 #parallax-fg1 {
 	position: absolute;
-	top: 200px;
+	top: 211px;
 	left: 0;
-	left: -120px;
+	left: -248px;
 	z-index: 3;
 	width: 100%;
 	height: 100%;
@@ -509,16 +509,16 @@ nav#nav-mobile {
 }
 #parallax-fg3 {
 	position: absolute;
-	top: 350px;
-	left: -50px;
+	top: 346px;
+	left: -183px;
 	z-index: 3;
 	width: 100%;
 	height: 100%;
 }
 #parallax-fg4 {
 	position: absolute;
-	top: 550px;
-	left: -50px;
+	top: 543px;
+	left: -95px;
 	z-index: 0;
 	width: 100%;
 	height: 100%;
@@ -550,6 +550,7 @@ nav#nav-mobile {
 	position: absolute;
 	width: 100%;
 	top: 0;
+	left: -2px;
 }
 #bus {
 	position: absolute;
