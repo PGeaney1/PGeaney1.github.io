@@ -509,8 +509,8 @@ nav#nav-mobile {
 }
 #parallax-fg3 {
 	position: absolute;
-	top: 350px;
-	left: 30px;
+	top: 346px;
+	right: 20px;
 	z-index: 3;
 	width: 100%;
 	height: 100%;
