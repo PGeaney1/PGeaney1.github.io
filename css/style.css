@@ -1,18 +1,9 @@
 /* Global */
-
-body {
-	background-color: #b7dfd4;
-	font-family: 'Asap', serif;
-	font-size: 15px;
-	text-align: center;
-	
-}
 .youtube_zone {
-	width: 650px;
+	width: 550px;
 	height: 300px;
 	margin: 0 auto;
-	padding-left: 0;
-	padding-right: 27px;
+	padding-left: 80px;
 	padding-top: 33px;
 	overflow: hidden;
 	background-image: url(../images/iphone.png);
@@ -124,6 +115,11 @@ img {
 a img {
 	border: 0;
 }
+body {
+	background-color: #214d58;
+	font-family: 'Asap', serif;
+	font-size: 15px;
+}
 a:link {
 	color: #f68f67;
 	text-decoration: none;
@@ -157,14 +153,14 @@ a:visited {
 	color: #fff;
 }
 .s4 {
-	
+	background-image: url(../images/bgUnderwater.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #fff;
 }
 .s6 {
-	
+	background-image: url(../images/bgUnderwater.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -209,7 +205,7 @@ nav#primary {
 	top: 50%;
 	right: 16px;
 	margin-top: -40px;
-	z-index: 9;
+	z-index: 5;
 }
 nav#primary li {
 	position: relative;
@@ -232,6 +228,7 @@ nav#primary h1 {
 	top: -7px;
 	display: none;
 	padding: 4px 20px 4px 7px;
+	;
 	color: #fff;
 	white-space: nowrap;
 	background: transparent url('../images/nav-arrow.png') 100% 50% no-repeat;
@@ -291,7 +288,7 @@ a.next:hover {
 }
 nav {
 	margin-bottom: 0px;
-	z-index: 7;
+	z-index: 6;
 }
 nav#nav-main {
 	background-color: #21a97e;
@@ -452,49 +449,48 @@ nav#nav-mobile {
 #parallax-bg1 {
 	position: absolute;
 	top: 150px;
-	right: 80px;
+	right: -280px;
 	z-index: 1;
-	width: 50%;
+	width: 100%;
 }
 #parallax-bg2 {
 	position: absolute;
-	top: 388px;
-	left: -467px;
+	top: 350px;
+	left: -10px;
 	z-index: 2;
-	width: 849px;
-	height: 935px;
+	width: 100%;
+	height: 100%;
 }
 #parallax-cloudbg1 {
 	position: absolute;
-	top: 471px;
-	left: -210px;
+	top: 550px;
+	left: 10px;
 	z-index: 4;
 	opacity: 0.5;
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 }
 #parallax-cloudbg2 {
 	position: absolute;
 	top: 52px;
 	left: 200px;
 	z-index: 2;
-	width: 60%;
-	height: 60%;
+	width: 100%;
+	height: 100%;
 }
 #parallax-cloudbg3 {
 	position: absolute;
-	top: 683px;
-	left: 110px;
+	top: 700px;
+	left: 350px;
 	z-index: 2;
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 }
 #parallax-fg1 {
 	position: absolute;
 	top: 200px;
 	left: 0;
-	left: -122px;
-	z-index: 3;
+	z-index: 4;
 	width: 80%;
 	height: 80%;
 	opacity: 0.5;
@@ -502,34 +498,34 @@ nav#nav-mobile {
 #parallax-fg2 {
 	position: absolute;
 	margin-top: 310px;
-	left: -100px;
-	z-index: 6;
-	width: 80%;
-	height: 80%;
+	left: -120px;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
 }
 #parallax-fg3 {
 	position: absolute;
-	top: 452px;
-	left: 82px;
+	top: 350px;
+	left: 50px;
 	z-index: 3;
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 }
 #parallax-fg4 {
 	position: absolute;
 	top: 550px;
 	left: -50px;
 	z-index: 0;
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 }
 #parallax-fg5 {
 	position: absolute;
 	top: 1000px;
 	left: 10px;
 	z-index: 3;
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 }
 #ufo1 {
 	position: fixed;
@@ -606,15 +602,12 @@ nav#nav-mobile {
 	bottom: 0;
 	right: 0;
 	z-index: 5;
-	width:50%;
-	
 }
 #click2 {
 	position: absolute;
 	bottom: 0;
-	left: 6px;
+	left: 40px;
 	z-index: 5;
-	
 }
 #click3 {
 	position: absolute;
@@ -657,7 +650,7 @@ a img {
 }
  @media all and (max-width: 700px) {
 body {
-	background-color: #b7dfd4;
+	background-color: #214d58;
 }
 .article, menu, nav, section {
 	display: block;
@@ -738,8 +731,8 @@ body {
 }
 #parallax-bg2 {
 	position: absolute;
-	top: 432px;
-	left: -310px;
+	top: 450px;
+	left: -10px;
 	z-index: 2;
 	width: 100%;
 	height: 100%;
@@ -758,8 +751,8 @@ body {
 }
 #parallax-fg1 {
 	position: absolute;
-	top: 917px;
-	left: -362px;
+	top: 50;
+	left: 10px;
 	z-index: 3;
 	width: 100%;
 	height: 100%;
@@ -774,16 +767,16 @@ body {
 }
 #parallax-fg3 {
 	position: absolute;
-	top: 209px;
-	left: -287px;
+	top: 30%;
+	left: 5%;
 	z-index: 3;
 	width: 100%;
 	height: 100%;
 }
 #parallax-cloudbg1 {
 	position: absolute;
-	top: 540px;
-	left: -158px;
+	top: 550px;
+	left: 0px;
 	z-index: 1;
 	width: 100%;
 	height: 100%;
@@ -798,8 +791,8 @@ body {
 }
 #parallax-cloudbg3 {
 	position: absolute;
-	top: 698px;
-	left: -241px;
+	top: 700px;
+	left: 350px;
 	z-index: 2;
 	width: 100%;
 	height: 100%;
@@ -862,14 +855,14 @@ body {
 }
 #click1 {
 	position: absolute;
-	bottom: 45px;
-	right: 87px;
+	bottom: 0;
+	right: 0;
 	z-index: 6;
 	width: 90%;
 }
 #click2 {
 	position: absolute;
-	bottom: 32px;
+	bottom: 0;
 	right: 0;
 	z-index: 6;
 	width: 90%;
@@ -1049,28 +1042,5 @@ a img {
 	bottom: 0;
 	z-index: 2;
 	width: 50%;
-}
-}
-
-@media all and (min-width: 1000px) {
-#wrapper {
-	position:relative;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	max-width: 1800px;
-    margin: 0 auto;
-	background-color: #b7dfd4;
-	
-}
-#parallax-fg3 {
-	position: absolute;
-	top: 346px;
-	display: block;
-    margin-left: auto;
-    margin-right: auto 
-	z-index: 3;
-	width: 80%;
-	height: 80%;
 }
 }
